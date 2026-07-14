@@ -73,7 +73,7 @@
     background-size: 100% 1.5px;
     outline: none;
   }
-  .top .brand { font-weight: 700; }
+  .top .brand { font-weight: 400; }
 
   /* ---------------- HOME ---------------- */
   .home-main {
@@ -815,7 +815,20 @@
     .cards { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     .pub { grid-template-columns: 120px 1fr; gap: 0 .9rem; }
-    .tabs { gap: .2rem 1.1rem; }
+    .sub h1 { font-size: var(--xl); }
+    .tabs {
+      flex-wrap: nowrap;
+      gap: .2rem 1.1rem;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      -webkit-overflow-scrolling: touch;
+      margin-left: -1.6rem;
+      margin-right: -1.6rem;
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+      white-space: nowrap;
+    }
+    .tabs button { flex: 0 0 auto; }
     .research-entry { grid-template-columns: 1fr; gap: .25rem; }
     .about-portrait { width: 148px; }
     .cs-split, .cs-split.rev { grid-template-columns: 1fr; gap: 1.1rem; }
@@ -829,6 +842,14 @@
     .cs-hero, .cs-text, .cs-split, .cs-duo, .cs-trio, .cs-quad, .cs-strip, .wave-quote { margin-bottom: 2.2rem; }
     .cs-strip { grid-template-columns: repeat(3, 1fr); gap: .7rem; }
     .cs-tall { max-width: 100%; }
+  }
+
+  /* Hover feedback is meaningful only when a pointer can hover. */
+  @media (hover: none) {
+    .top a:hover,
+    .side h2 a:hover { background-size: 0 1.5px; }
+    .side h2 a:hover { background-size: 0 2px; }
+    .tabs button:hover { color: var(--dim); }
   }
 </style>
 </head>
@@ -849,7 +870,7 @@
         <li class="track-item" data-priority="2"><a href="#/research?publication=publication-genai-photo-editing">"I'm happy even though it's not real": GenAI Photo Editing as a Remembering Experience <span class="yr">(2026)</span></a></li>
         <li class="track-item" data-priority="3"><a href="#/research?publication=publication-nurturenextgen">From Needs to Insights: Designing Digital Support with Parents of Children with Genetic Neurodevelopmental Conditions <span class="yr">(2025)</span></a></li>
         <li class="track-item" data-priority="4"><a href="#/research?publication=publication-calligraphy-echo">Calligraphy Echo: Sonifying Chinese Calligraphy with MIDI-Enabled Brush <span class="yr">(2025)</span></a></li>
-        <li class="more"><a href="#/research?tab=publications">View all ↗</a></li>
+        <li class="more"><a href="#/research?tab=publications">View all</a></li>
       </ol>
     </div>
     <div class="side" data-disc-side="b">
@@ -860,7 +881,7 @@
         <li class="track-item" data-priority="2"><a href="#/design/nailit">NAILIT <span class="yr">(2024)</span></a></li>
         <li class="track-item" data-priority="3"><a href="#/design/wave">Wave <span class="yr">(2022)</span></a></li>
         <li class="track-item" data-priority="4"><a href="#/design/benlai-art-education">Stay Real Art / 本来计画 <span class="yr">(2021)</span></a></li>
-        <li class="more"><a href="#/design">View all ↗</a></li>
+        <li class="more"><a href="#/design">View all</a></li>
       </ol>
     </div>
 
@@ -2850,7 +2871,7 @@
     </div>
     <div class="sec">
       <h3>CV</h3>
-      <div class="entry"><a href="assets/YufengWu-CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV (PDF) ↗</a></div>
+      <div class="entry"><a href="assets/YufengWu-CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV (PDF)</a></div>
       <div class="entry" style="color:var(--dim)">Last updated July 2026.</div>
     </div>
   </div>
