@@ -412,6 +412,12 @@
     margin: 2rem 0 1.1rem;
   }
   #publication-list > h4:first-child { margin-top: 0; }
+  .latest-research {
+    margin: 0 0 1.35rem;
+    font-size: .92rem;
+    line-height: 1.5;
+  }
+  #publication-list > .latest-research + h4 { margin-top: 0; }
   .pub {
     display: grid; grid-template-columns: 220px 1fr;
     gap: 0 1.5rem; align-items: start;
@@ -751,6 +757,15 @@
     border-top: 1px solid var(--line);
     padding-top: 1rem;
   }
+  .wave-source {
+    max-width: 52em;
+    margin: -2.15rem auto 3.2rem;
+  }
+  .wave-source .cs-refs {
+    margin: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
   .cs-tall { max-width: 400px; margin-left: auto; margin-right: auto; }
   .cs-strip {
     display: grid; grid-template-columns: repeat(5, 1fr);
@@ -848,6 +863,7 @@
     .cs-trio { grid-template-columns: 1fr; gap: 1.1rem; }
     .cs-quad { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
     .cs-hero, .cs-text, .cs-split, .cs-duo, .cs-trio, .cs-quad, .cs-strip, .wave-quote { margin-bottom: 2.2rem; }
+    .wave-source { margin: -1.15rem auto 2.2rem; }
     .cs-strip { grid-template-columns: repeat(3, 1fr); gap: .7rem; }
     .cs-tall { max-width: 100%; }
   }
@@ -944,6 +960,7 @@
     <!-- ---- PUBLICATIONS TAB ---- -->
     <div class="tabpane on" id="tab-a-publications">
       <div class="sec" id="publication-list">
+        <p class="latest-research">Visit my latest research on <a href="https://scholar.google.com/citations?user=g34RhIAAAAAJ&amp;hl=en&amp;inst=8615794581978883182" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
         <h4>2026</h4>
         <div class="pub" id="publication-conversational-agents-ar">
           <div class="thumb thumb-tiis"><img src="assets/images/publications/tiis-context-aware-model.jpg" alt="Context-aware interaction model connecting detected AR context, interaction initiative, and conversational agent actions" loading="lazy"></div>
@@ -1844,7 +1861,7 @@
       <cite>Su Shi, <i>The Red Cliff, Part I</i>, 1082 · English translation published in Cyril Birch (ed.), <i>Anthology of Chinese Literature</i>, 1965</cite>
     </figure>
 
-    <div class="cs-text">
+    <div class="wave-source">
       <p class="cs-refs">Sources: <a href="https://theme.npm.edu.tw/selection/Article.aspx?lang=2&amp;sNo=04009295" target="_blank" rel="noopener noreferrer">National Palace Museum, <i>Former Ode on the Red Cliff</i></a>; <a href="https://zh.wikisource.org/zh-hant/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B3%A6" target="_blank" rel="noopener noreferrer">Su Shi, 《前赤壁賦》</a>; <a href="https://www-1.gsb.columbia.edu/ps/china/sushi_redcliff.pdf" target="_blank" rel="noopener noreferrer">Columbia University, <i>Excerpts from The Red Cliff, Part I</i></a>.</p>
     </div>
 
