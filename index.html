@@ -1,0 +1,3468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yufeng Wu | Researcher &amp; Designer</title>
+<meta name="description" content="Yufeng Wu is a researcher and designer working across interactive technologies, user experience and visual identity.">
+<meta name="author" content="Yufeng Wu">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-title" content="Yufeng Wu">
+<link rel="icon" href="assets/seo/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/seo/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yufeng Wu | Researcher &amp; Designer">
+<meta property="og:description" content="Yufeng Wu is a researcher and designer working across interactive technologies, user experience and visual identity.">
+<meta property="og:image" content="assets/seo/og-yufeng-wu.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yufeng Wu, Researcher and Designer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yufeng Wu | Researcher &amp; Designer">
+<meta name="twitter:description" content="Yufeng Wu is a researcher and designer working across interactive technologies, user experience and visual identity.">
+<meta name="twitter:image" content="assets/seo/og-yufeng-wu.png">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111111;
+    --dim: #9a9a9a;
+    --faint: #c9c9c9;
+    --line: #e4e4e4;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --xl: clamp(1.25rem, 2.6vw, 1.9rem);
+  }
+  * { box-sizing: border-box; }
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
+  }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    overflow-x: hidden;
+  }
+  a { color: var(--ink); }
+
+  .page { display: none; }
+  .page.on { display: block; }
+
+  .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    position: sticky; top: 0; z-index: 30;
+    padding: 1rem 1.6rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    font-size: .8rem;
+  }
+  .top a {
+    text-decoration: none;
+    padding-bottom: .12em;
+    background: linear-gradient(currentColor, currentColor) no-repeat left 100% / 0 1.5px;
+    transition: background-size .3s ease;
+  }
+  .top a:hover, .top a:focus-visible {
+    background-size: 100% 1.5px;
+    outline: none;
+  }
+  .top .brand { font-weight: 700; }
+
+  /* ---------------- HOME ---------------- */
+  .home-main {
+    position: relative;
+    min-height: calc(100dvh - 3.05rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    column-gap: 2.5rem;
+    padding: 1.1rem 1.6rem 15rem;
+  }
+  .disc-label { font-size: .78rem; margin: 0 0 1.6rem; }
+  .side h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--xl);
+    letter-spacing: -.01em;
+    line-height: 1.15;
+    margin: 0 0 .3em;
+  }
+  .side h2 a {
+    text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) no-repeat left calc(100% - .06em) / 0 2px;
+    transition: background-size .35s ease;
+    padding-bottom: .1em;
+  }
+  .side h2 a:hover, .side h2 a:focus-visible {
+    background-size: 100% 2px;
+    outline: none;
+  }
+  .tracks { list-style: none; margin: 0; padding: 0; }
+  .tracks li { margin: 0 0 .45em; }
+  .tracks a {
+    color: var(--ink); text-decoration: none;
+    font-weight: 700;
+    font-size: var(--xl);
+    letter-spacing: -.03em;
+    line-height: 1.15;
+    display: block;
+  }
+  .tracks .yr { color: var(--faint); white-space: nowrap; }
+  .tracks a:hover, .tracks a:focus-visible { color: var(--dim); outline: none; }
+  .tracks .more a {
+    font-size: .8rem; font-weight: 400; color: var(--dim);
+    margin-top: 1.1rem; letter-spacing: 0;
+  }
+  .tracks .more a:hover { color: var(--ink); }
+  .tracks .fit-hide { display: none; }
+
+  .sig {
+    position: absolute;
+    left: 1.6rem; bottom: 1.4rem;
+    max-width: 30em;
+    z-index: 2;
+  }
+  .sig .n {
+    display: block;
+    font-weight: 700;
+    font-size: var(--xl);
+    letter-spacing: -.03em;
+    line-height: 1.15;
+    margin-bottom: .12em;
+  }
+  .sig p {
+    margin: 0;
+    font-weight: 400;
+    font-size: var(--xl);
+    letter-spacing: -.03em;
+    line-height: 1.2;
+  }
+
+  /* ---------------- DISC ---------------- */
+  .disc-dock {
+    position: absolute;
+    left: calc(50% + 1.25rem);
+    bottom: 1.4rem;
+    width: clamp(260px, min(36vw, 56vh), 780px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    z-index: 5;
+  }
+  #disc {
+    --disc-angle: 0deg;
+    --disc-flip: 0deg;
+    --disc-hue: 0deg;
+    --disc-saturation: 1;
+    --disc-brightness: 1;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    clip-path: circle(50%);
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    pointer-events: auto;
+    perspective: 1000px;
+  }
+  #disc.is-grabbing { cursor: grabbing; }
+  #disc:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--ink);
+  }
+  .disc-flipper, .disc-rotor, .disc-face {
+    position: absolute; inset: 0; border-radius: 50%;
+    transform-style: preserve-3d;
+  }
+  .disc-flipper {
+    transform: rotateY(var(--disc-flip));
+    transition: transform .72s cubic-bezier(.2,.75,.2,1);
+    will-change: transform;
+  }
+  .disc-rotor {
+    transform: rotateZ(var(--disc-angle));
+    will-change: transform;
+  }
+  .disc-face {
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .disc-face-a { transform: translateZ(1px); }
+  .disc-face-b { transform: rotateY(180deg) translateZ(1px); }
+  .disc-glass, .disc-tint, .disc-streaks, .disc-rings, .disc-rim {
+    position: absolute; inset: 0; border-radius: 50%;
+  }
+  .disc-glass {
+    backdrop-filter: blur(2px) saturate(140%) brightness(1.02);
+    -webkit-backdrop-filter: blur(2px) saturate(140%) brightness(1.02);
+    -webkit-mask: radial-gradient(circle, transparent 0 7%, #000 7.5% 99%, transparent 99.5%);
+    mask: radial-gradient(circle, transparent 0 7%, #000 7.5% 99%, transparent 99.5%);
+  }
+  .disc-tint, .disc-streaks, .disc-rings {
+    -webkit-mask: radial-gradient(circle, transparent 0 7%, #000 7.5% 92%, transparent 93%);
+    mask: radial-gradient(circle, transparent 0 7%, #000 7.5% 92%, transparent 93%);
+  }
+  .disc-tint {
+    background:
+      radial-gradient(circle at 35% 27%, rgba(255,255,255,.7) 0 9%, rgba(255,255,255,0) 40%),
+      radial-gradient(circle at 68% 74%, rgba(255,255,255,.35) 0 6%, rgba(255,255,255,0) 30%),
+      conic-gradient(from 0deg,
+        rgba(226,226,233,.22) 0 7%,
+        rgba(255,196,222,.38) 12%,
+        rgba(255,236,186,.32) 17%,
+        rgba(180,208,255,.40) 24%,
+        rgba(226,226,233,.20) 33%,
+        rgba(226,226,233,.20) 46%,
+        rgba(186,224,255,.34) 53%,
+        rgba(255,204,232,.36) 60%,
+        rgba(255,244,196,.28) 66%,
+        rgba(226,226,233,.20) 74%,
+        rgba(226,226,233,.22) 100%),
+      radial-gradient(circle,
+        rgba(210,210,220,.18) 22%,
+        rgba(238,238,244,.26) 50%,
+        rgba(200,200,212,.22) 78%,
+        rgba(176,176,190,.28) 96%);
+    filter: hue-rotate(var(--disc-hue)) saturate(var(--disc-saturation)) brightness(var(--disc-brightness));
+  }
+  .disc-face-b .disc-tint {
+    filter: hue-rotate(calc(var(--disc-hue) + 24deg)) saturate(.92) brightness(1.03);
+  }
+  .disc-streaks {
+    background: repeating-conic-gradient(
+      rgba(255,255,255,.06) 0deg .3deg,
+      rgba(255,255,255,0) .3deg 1.1deg,
+      rgba(90,90,105,.025) 1.1deg 1.3deg,
+      rgba(255,255,255,0) 1.3deg 2.4deg);
+    opacity: .8;
+  }
+  .disc-rings {
+    background:
+      radial-gradient(circle,
+        transparent 0 7%,
+        rgba(0,0,0,.14) 7.2% 7.5%, transparent 7.9%,
+        transparent 8% 13.5%,
+        rgba(255,255,255,.5) 13.6% 15.8%,
+        rgba(0,0,0,.07) 16% 16.3%, transparent 16.6%,
+        transparent 17% 21.6%,
+        rgba(0,0,0,.10) 21.8% 22.1%, transparent 22.5%,
+        transparent 23% 91%,
+        rgba(0,0,0,.08) 91.3% 91.7%, transparent 92%);
+  }
+  .disc-rim {
+    background:
+      radial-gradient(circle,
+        transparent 0 92%,
+        rgba(238,238,244,.38) 92.5% 97.5%,
+        rgba(160,160,175,.30) 98% 98.6%,
+        rgba(90,90,105,.22) 98.8% 99.2%,
+        transparent 99.6%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .disc-flipper { transition: none; }
+  }
+
+  /* ---------------- SUBPAGES ---------------- */
+  .sub {
+    max-width: 820px; margin: 0 auto;
+    padding: 1.5rem 1.6rem 5rem;
+  }
+  .sub h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    letter-spacing: -.01em;
+    margin: 1.5rem 0 1rem;
+  }
+  .bio {
+    font-size: .95rem; line-height: 1.65;
+    max-width: 42em; margin: 0 0 2.4rem;
+  }
+  .about-quote {
+    max-width: 30rem;
+    margin: 1.4rem 0 1.8rem;
+  }
+  .about-quote blockquote {
+    margin: 0;
+    padding: 0 0 .14em;
+    font-family: var(--serif);
+    font-size: .95rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.65;
+  }
+  .about-quote figcaption {
+    margin-top: .55rem;
+    color: var(--dim);
+    font-size: .8rem;
+  }
+  .about-copy { max-width: 46em; }
+  .about-copy p { margin: 0 0 1.15rem; }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .about-profile { margin: 2.2rem 0 0; }
+  .about-portrait {
+    width: 160px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background: var(--bg);
+  }
+  .about-portrait img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .about-name {
+    margin: .9rem 0 .55rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .about-socials {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+  .about-socials a {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+  }
+  .about-socials a:hover { color: var(--ink); transform: translateY(-1px); }
+  .about-socials a:focus-visible { color: var(--ink); outline: 1px solid var(--ink); outline-offset: 2px; }
+  .about-socials svg { display: block; width: 17px; height: 17px; }
+
+  .tabs {
+    display: flex; flex-wrap: wrap; gap: .2rem 1.6rem;
+    margin-bottom: 2.8rem;
+    padding-bottom: 1rem; border-bottom: 1px solid var(--line);
+  }
+  .tabs button {
+    appearance: none; border: none; padding: 0 0 .25em;
+    font-family: var(--sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .85rem; letter-spacing: .01em;
+    color: var(--dim); cursor: pointer;
+    background: linear-gradient(currentColor, currentColor) no-repeat left 100% / 0 1.5px;
+    transition: background-size .3s ease, color .2s ease;
+  }
+  .tabs button:hover { color: var(--ink); }
+  .tabs button.on { color: var(--ink); background-size: 100% 1.5px; }
+  .tabpane { display: none; }
+  .tabpane.on { display: block; }
+
+  .sec { margin-bottom: 3rem; }
+  .sec h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .85rem; letter-spacing: .01em;
+    margin: 0 0 1.2rem;
+  }
+  .entry { margin-bottom: 1.15rem; font-size: .95rem; line-height: 1.55; }
+  .entry .t { font-weight: 700; }
+  .entry .m { color: var(--dim); font-size: .85rem; }
+  .entry .m a { color: var(--dim); }
+  .entry .m a:hover { color: var(--ink); }
+  .entry .date {
+    color: var(--dim); font-size: .8rem;
+    font-variant-numeric: tabular-nums; margin-right: .7rem;
+  }
+  .research-entry {
+    display: grid;
+    grid-template-columns: 7.6rem minmax(0, 1fr);
+    gap: 0 1.25rem;
+    padding-bottom: 1.4rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .research-entry:last-child { border-bottom: 0; }
+  .research-entry .date {
+    margin: .15rem 0 0;
+    white-space: nowrap;
+  }
+  .research-entry .t { font-size: 1rem; }
+  .research-entry .org { margin-top: .1rem; }
+  .research-entry p { max-width: 43rem; margin: .5rem 0 0; }
+  .research-entry .m { margin-top: .45rem; }
+  .research-entry .m strong { color: var(--ink); }
+  .cite { margin-bottom: 1.3rem; font-size: .92rem; line-height: 1.6; }
+  .cite .doi a { color: var(--dim); text-decoration: none; }
+  .cite .doi a:hover { color: var(--ink); text-decoration: underline; }
+
+  .sec h4 {
+    font-size: .82rem; font-weight: 700; color: var(--dim);
+    font-variant-numeric: tabular-nums;
+    margin: 2rem 0 1.1rem;
+  }
+  #publication-list > h4:first-child { margin-top: 0; }
+  .pub {
+    display: grid; grid-template-columns: 220px 1fr;
+    gap: 0 1.5rem; align-items: start;
+    margin-bottom: 2.2rem; font-size: .92rem; line-height: 1.45;
+    scroll-margin-block: 20vh;
+  }
+  .pub:focus { outline: none; }
+  .pub .thumb {
+    grid-column: 1; grid-row: 1 / 5;
+    aspect-ratio: 16 / 10; border-radius: 2px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+  }
+  .pub .thumb > img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+  .pub .thumb-tiis > img { object-position: center top; }
+  .pub .thumb-calligraphy > img { object-fit: contain; }
+  .pub .thumb-flowchart > img { object-fit: contain; }
+  .pub .thumb-nng { background: var(--bg); }
+  .pub .thumb-nng .thumb-logo {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 72%; height: auto;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+  }
+  .pub .t, .pub .a, .pub .v, .pub .btns { grid-column: 2; }
+  .pub .t { font-weight: 700; font-size: .98rem; margin-bottom: .3rem; }
+  .pub .a { margin-bottom: .25rem; }
+  .pub .v { margin-bottom: .55rem; }
+  #publication-list { scroll-margin-top: 1.5rem; }
+  .pub.is-target { background: #f1f1f1; }
+  @media (prefers-reduced-motion: no-preference) {
+    .pub.is-target { animation: publication-target .8s ease-out forwards; }
+  }
+  @keyframes publication-target {
+    0% { background: transparent; }
+    35% { background: #ececec; }
+    100% { background: transparent; }
+  }
+  .btns { display: flex; gap: .45rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    font-size: .72rem; letter-spacing: .02em;
+    color: var(--ink);
+    border: 1px solid var(--faint);
+    border-radius: 2px;
+    padding: .2em .6em;
+    text-decoration: none;
+    transition: border-color .15s ease, background .15s ease, color .15s ease;
+  }
+  .btn:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem 1.6rem; }
+  .projects-grid .proj { margin: 0; }
+  .project-category {
+    grid-column: 1 / -1;
+    margin: 2.6rem 0 -.2rem;
+    padding-top: .85rem;
+    border-top: 1px solid var(--line);
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .project-category:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .portrait {
+    width: 180px; aspect-ratio: 4 / 5; border-radius: 2px;
+    background: linear-gradient(165deg, #ececec, #d8d8d8 60%, #e8e8e8);
+    margin: 0 0 1.6rem;
+  }
+
+  .cards {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem 1.6rem;
+    margin-bottom: .5rem;
+  }
+  .card .ph {
+    aspect-ratio: 16 / 10; border-radius: 2px;
+    background: linear-gradient(160deg, #ededed, #d8d8d8 60%, #e8e8e8);
+    margin-bottom: .8rem;
+    overflow: hidden;
+  }
+  .card .ph img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .card .photo-ids img { object-position: center 58%; }
+  .card .photo-fid img { object-position: center 38%; }
+  .card .cite { font-size: .88rem; line-height: 1.55; margin: 0; }
+
+  .proj { margin: 0 0 4rem; }
+  .proj .ph {
+    aspect-ratio: 3 / 2; border-radius: 2px; margin-bottom: 1rem;
+    background: linear-gradient(150deg, #ececec, #d6d6d6 60%, #e9e9e9);
+    overflow: hidden;
+  }
+  .proj .ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .proj .ph canvas {
+    display: block;
+    width: 100%; height: 100%;
+    background: #090a0d;
+    pointer-events: none;
+  }
+  .proj h2 { font-size: 1.3rem; letter-spacing: -.02em; margin: 0 0 .25rem; }
+  .proj .m { color: var(--dim); font-size: .85rem; }
+  .proj p { font-size: .95rem; line-height: 1.6; max-width: 36em; margin: .5rem 0 0; }
+  a.proj {
+    display: block; color: var(--ink); text-decoration: none;
+  }
+  a.proj h2 {
+    display: inline;
+    background: linear-gradient(currentColor, currentColor) no-repeat left calc(100% - .08em) / 0 1.5px;
+    transition: background-size .3s ease;
+  }
+  a.proj:hover h2, a.proj:focus-visible h2 { background-size: 100% 1.5px; }
+  a.proj:focus-visible { outline: none; }
+
+  /* ---------------- CASE STUDY ---------------- */
+  .case {
+    max-width: 1080px; margin: 0 auto;
+    padding: 1.5rem 1.6rem 4rem;
+  }
+  .case-back {
+    display: inline-block;
+    font-size: .8rem; color: var(--dim);
+    text-decoration: none;
+    margin: .4rem 0 2.6rem;
+  }
+  .case-back:hover { color: var(--ink); }
+  .case-eyebrow {
+    font-size: .78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .04em;
+    color: var(--dim);
+    margin: 0 0 .8rem;
+  }
+  .case h1 {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    letter-spacing: -.03em;
+    line-height: 1.05;
+    margin: 0 0 .5rem;
+  }
+  .case-sub {
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: -.01em;
+    line-height: 1.4;
+    max-width: 34em;
+    margin: 0 0 2rem;
+  }
+  .case-note {
+    font-size: .82rem;
+    color: var(--dim);
+    margin: -1.35rem 0 2rem;
+  }
+  .case-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem 2rem;
+    padding: 1.1rem 0 1.3rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2.6rem;
+    font-size: .88rem;
+  }
+  .case-meta .k {
+    display: block;
+    font-size: .7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .05em;
+    color: var(--dim);
+    margin-bottom: .3rem;
+  }
+  .cs-img {
+    border-radius: 2px;
+    background: linear-gradient(155deg, #ededed, #d8d8d8 60%, #e8e8e8);
+    overflow: hidden;
+  }
+  .cs-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .cs-img.r169 { aspect-ratio: 16 / 9; }
+  .cs-img.r24 { aspect-ratio: 12 / 5; }
+  .cs-img.r43 { aspect-ratio: 4 / 3; }
+  .cs-img.r1x1 { aspect-ratio: 1; }
+  .cs-img.natural img { height: auto; object-fit: contain; }
+  .cs-video {
+    background: #050505;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 0 3.2rem;
+  }
+  .cs-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .cs-caption {
+    font-size: .78rem; color: var(--dim);
+    margin: .6rem 0 0;
+  }
+  .cs-hero { margin: 0 0 3.2rem; }
+  .cs-text {
+    max-width: 42em;
+    margin: 0 auto 3.2rem;
+    font-size: .98rem; line-height: 1.7;
+  }
+  .cs-text h3 {
+    font-size: .85rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .01em;
+    margin: 0 0 .9rem;
+  }
+  .cs-text p { margin: 0 0 1rem; }
+  .cs-text p:last-child { margin-bottom: 0; }
+  .cs-split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2.4rem;
+    align-items: center;
+    margin: 0 0 3.2rem;
+  }
+  .cs-split.rev { grid-template-columns: 2fr 3fr; }
+  .cs-split.rev .cs-img { order: 2; }
+  .cs-split.rev .cs-copy { order: 1; }
+  .cs-copy { font-size: .95rem; line-height: 1.65; }
+  .cs-copy h3 {
+    font-size: .85rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .01em;
+    margin: 0 0 .9rem;
+  }
+  .cs-copy p { margin: 0 0 .9rem; }
+  .cs-copy p:last-child { margin-bottom: 0; }
+  .cs-duo {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    margin: 0 0 3.2rem;
+  }
+  .cs-illustration-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
+    margin: 0 0 3.2rem;
+  }
+  .cs-trio {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+    margin: 0 0 3.2rem;
+  }
+  .cs-quad {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 0 3.2rem;
+  }
+  .cs-quad.nailit-line-grid { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+  .nailit-packaging-system { background: #fff; }
+  .cs-duo.exhibition { grid-template-columns: 2fr 3fr; align-items: start; }
+  .cs-duo.applications-pair { align-items: stretch; }
+  .applications-pair .cs-img {
+    height: clamp(300px, 31vw, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  .applications-pair .cs-img img { width: 100%; height: 100%; object-fit: contain; }
+  .cs-live {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: crosshair;
+  }
+  .cs-live canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .wave-live {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: #090a0d;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 0 .6rem;
+    cursor: default;
+  }
+  .wave-live canvas {
+    position: absolute; inset: 0;
+    display: block;
+    width: 100%; height: 100%;
+    outline: none;
+  }
+  .wave-quote {
+    max-width: 52em;
+    margin: 0 auto 3.2rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .wave-quote blockquote {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 1.4rem;
+    margin: 0 0 .65rem;
+    font-family: var(--serif);
+    font-size: .98rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .wave-quote blockquote span + span {
+    color: var(--dim);
+  }
+  .wave-quote cite {
+    color: var(--dim);
+    font-size: .78rem;
+    font-style: normal;
+  }
+  @media (max-width: 620px) {
+    .wave-quote blockquote { grid-template-columns: 1fr; gap: .35rem; }
+  }
+  .gt-title {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    pointer-events: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 7vw, 5rem);
+    letter-spacing: -.02em;
+  }
+  .cs-refs {
+    font-size: .78rem; color: var(--dim); line-height: 1.7;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+  .cs-tall { max-width: 400px; margin-left: auto; margin-right: auto; }
+  .cs-strip {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin: 0 0 3.2rem;
+  }
+  .douyin-brief { margin-top: 4.6rem; }
+  .guide-thumb {
+    display: block; width: 100%;
+    border: 1px solid var(--line); border-radius: 2px;
+    padding: 0; background: none;
+    overflow: hidden; cursor: zoom-in;
+    transition: opacity .2s ease;
+  }
+  .guide-thumb img { display: block; width: 100%; height: auto; }
+  .guide-thumb:hover { opacity: .82; }
+  .guide-thumb:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .lb {
+    position: fixed; inset: 0; z-index: 99;
+    background: rgba(17,17,17,.93);
+    display: none;
+    overflow-y: auto;
+  }
+  .lb.on { display: block; }
+  .lb img {
+    display: block;
+    width: min(92vw, 640px); height: auto;
+    margin: 3.5rem auto;
+  }
+  .lb-close {
+    position: fixed; top: .9rem; right: 1.2rem;
+    border: 0; background: none; cursor: pointer;
+    color: #fff; font-size: 2rem; line-height: 1;
+    font-family: var(--sans);
+  }
+  .cs-next {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-top: 1px solid var(--line);
+    padding-top: 1.4rem;
+  }
+  .cs-next a { text-decoration: none; color: var(--dim); font-size: .88rem; }
+  .cs-next a:hover { color: var(--ink); }
+  .cs-next .nxt { font-weight: 700; color: var(--ink); font-size: 1rem; }
+  .cs-next .nxt:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 700px) {
+    .home-main { grid-template-columns: 1fr; row-gap: 2.4rem; padding-bottom: 1.6rem; }
+    .side[data-disc-side="a"] { order: 1; }
+    .side[data-disc-side="b"] { order: 2; }
+    .sig {
+      position: relative;
+      left: auto; bottom: auto;
+      max-width: calc(100vw - 3.2rem);
+      order: 4;
+    }
+    .disc-dock {
+      position: relative;
+      left: auto; right: auto; bottom: auto;
+      width: min(62vw, 230px);
+      justify-self: end;
+      order: 3;
+    }
+    .cards { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .pub { grid-template-columns: 120px 1fr; gap: 0 .9rem; }
+    .tabs { gap: .2rem 1.1rem; }
+    .research-entry { grid-template-columns: 1fr; gap: .25rem; }
+    .about-portrait { width: 148px; }
+    .cs-split, .cs-split.rev { grid-template-columns: 1fr; gap: 1.1rem; }
+    .cs-split.rev .cs-img { order: 1; }
+    .cs-split.rev .cs-copy { order: 2; }
+    .cs-duo, .cs-illustration-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+    .cs-duo.exhibition { grid-template-columns: 1fr; }
+    .applications-pair .cs-img { height: auto; aspect-ratio: 1 / 1; }
+    .cs-trio { grid-template-columns: 1fr; gap: 1.1rem; }
+    .cs-quad { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+    .cs-hero, .cs-text, .cs-split, .cs-duo, .cs-trio, .cs-quad, .cs-strip, .wave-quote { margin-bottom: 2.2rem; }
+    .cs-strip { grid-template-columns: repeat(3, 1fr); gap: .7rem; }
+    .cs-tall { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HOME ================= -->
+<section class="page on" id="page-home">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <main class="home-main">
+    <div class="side" data-disc-side="a">
+      <p class="disc-label">Disc 1</p>
+      <h2><a href="#/research">Side A: Research</a></h2>
+      <ol class="tracks" data-home-max="4">
+        <li class="track-item" data-priority="1"><a href="#/research?publication=publication-conversational-agents-ar">Conversational Agents in Augmented Reality: A Systematic Review <span class="yr">(2026)</span></a></li>
+        <li class="track-item" data-priority="2"><a href="#/research?publication=publication-genai-photo-editing">"I'm happy even though it's not real": GenAI Photo Editing as a Remembering Experience <span class="yr">(2026)</span></a></li>
+        <li class="track-item" data-priority="3"><a href="#/research?publication=publication-nurturenextgen">From Needs to Insights: Designing Digital Support with Parents of Children with Genetic Neurodevelopmental Conditions <span class="yr">(2025)</span></a></li>
+        <li class="track-item" data-priority="4"><a href="#/research?publication=publication-calligraphy-echo">Calligraphy Echo: Sonifying Chinese Calligraphy with MIDI-Enabled Brush <span class="yr">(2025)</span></a></li>
+        <li class="more"><a href="#/research?tab=publications">View all ↗</a></li>
+      </ol>
+    </div>
+    <div class="side" data-disc-side="b">
+      <p class="disc-label">Disc 2</p>
+      <h2><a href="#/design">Side B: Design</a></h2>
+      <ol class="tracks" data-home-max="4">
+        <li class="track-item" data-priority="1"><a href="#/design/1024">[1,0,2,4] <span class="yr">(2023)</span></a></li>
+        <li class="track-item" data-priority="2"><a href="#/design/nailit">NAILIT <span class="yr">(2024)</span></a></li>
+        <li class="track-item" data-priority="3"><a href="#/design/wave">Wave <span class="yr">(2022)</span></a></li>
+        <li class="track-item" data-priority="4"><a href="#/design/benlai-art-education">Stay Real Art / 本来计画 <span class="yr">(2021)</span></a></li>
+        <li class="more"><a href="#/design">View all ↗</a></li>
+      </ol>
+    </div>
+
+    <div class="sig">
+      <span class="n">Yufeng Wu | 吴御风</span>
+      <p>I design and study technologies for the moments that are hard to measure: remembering, caring, communicating, and feeling understood.</p>
+    </div>
+
+    <div class="disc-dock">
+      <div id="disc" role="button" tabindex="0" aria-label="Interactive compact disc, Side A. Drag to spin and press to flip.">
+        <div class="disc-flipper">
+          <div class="disc-rotor">
+            <div class="disc-face disc-face-a" aria-hidden="true">
+              <div class="disc-glass"></div>
+              <div class="disc-tint"></div>
+              <div class="disc-streaks"></div>
+              <div class="disc-rings"></div>
+              <div class="disc-rim"></div>
+            </div>
+            <div class="disc-face disc-face-b" aria-hidden="true">
+              <div class="disc-glass"></div>
+              <div class="disc-tint"></div>
+              <div class="disc-streaks"></div>
+              <div class="disc-rings"></div>
+              <div class="disc-rim"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- ================= SIDE A ================= -->
+<section class="page" id="page-research">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="sub">
+    <h1>Side A: Research</h1>
+    <p class="bio">I am a PhD candidate in Human-Computer Interaction at the <a href="https://www.uts.edu.au/" target="_blank" rel="noopener noreferrer">University of Technology Sydney</a>, supervised by <a href="https://profiles.uts.edu.au/Baki.Kocaballi" target="_blank" rel="noopener noreferrer">Dr A. Baki Kocaballi</a> and <a href="https://profiles.uts.edu.au/Elise.VandenHoven" target="_blank" rel="noopener noreferrer">Professor Elise van den Hoven</a>. My research asks how emerging interactive technologies can support memory and wellbeing in everyday life. Alongside my PhD, I work as a Research Assistant on the <a href="https://nurturenextgen.research.uts.edu.au/" target="_blank" rel="noopener noreferrer">NurtureNextGen project</a>. I am also a Research Intern at the <a href="https://adelaide.edu.au/research/australian-research-centre-for-interactive-and-virtual-environments/" target="_blank" rel="noopener noreferrer">Australian Research Centre for Interactive and Virtual Environments</a>.</p>
+
+    <nav class="tabs" role="tablist">
+      <button class="on" data-tab="a-publications">Publications</button>
+      <button data-tab="a-experience">Experience</button>
+      <button data-tab="a-teaching">Teaching</button>
+      <button data-tab="a-service">Service</button>
+      <button data-tab="a-awards">Awards</button>
+    </nav>
+
+    <!-- ---- PUBLICATIONS TAB ---- -->
+    <div class="tabpane on" id="tab-a-publications">
+      <div class="sec" id="publication-list">
+        <h4>2026</h4>
+        <div class="pub" id="publication-conversational-agents-ar">
+          <div class="thumb thumb-tiis"><img src="assets/images/publications/tiis-context-aware-model.jpg" alt="Context-aware interaction model connecting detected AR context, interaction initiative, and conversational agent actions" loading="lazy"></div>
+          <div class="t">Conversational Agents in Augmented Reality: A Systematic Review</div>
+          <div class="a"><b>Yufeng Wu</b>, Raj Mahmud, Abdullah Bin Sawad, Elise van den Hoven, A. Baki Kocaballi</div>
+          <div class="v"><i>ACM Transactions on Interactive Intelligent Systems</i>, 2026.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3815590" target="_blank" rel="noopener noreferrer">DOI</a></div>
+        </div>
+        <div class="pub" id="publication-genai-photo-editing">
+          <div class="thumb"><img src="assets/images/publications/genai-photo-editing-thumbnail.jpg" alt="A participant's original photograph compared with four generative AI edits that change personal and contextual details" loading="lazy"></div>
+          <div class="t">"I'm happy even though it's not real": GenAI Photo Editing as a Remembering Experience</div>
+          <div class="a"><b>Yufeng Wu</b>, Qing Li, Elise van den Hoven, A. Baki Kocaballi</div>
+          <div class="v"><i>CHI Conference on Human Factors in Computing Systems</i>, 2026.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3772318.3790927" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/genai-photo-editing-remembering.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+        </div>
+        <h4>2025</h4>
+        <div class="pub" id="publication-nurturenextgen">
+          <div class="thumb"><img src="assets/images/publications/from-needs-to-insights-thumbnail.png" alt="A five-stage co-design journey from families and conversation through collaborative workshops and needs gathering to design insights" loading="lazy"></div>
+          <div class="t">From Needs to Insights: Designing Digital Support with Parents of Children with Genetic Neurodevelopmental Conditions</div>
+          <div class="a"><b>Yufeng Wu</b>, Jasmeet Kaur Bedi, Elizabeth Callinan, Falak M Helwani, Heather Renton, Julia Dray, Kate R Davidson, Maya Pinn, Meagan Cross, Alison McEwen, Elise van den Hoven, Erin Turbitt</div>
+          <div class="v"><i>Australian Conference on Human-Computer Interaction (OzCHI)</i>, 2025.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3764687.3769921" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/from-needs-to-insights.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+        </div>
+        <div class="pub" id="publication-calligraphy-echo">
+          <div class="thumb thumb-calligraphy"><img src="assets/images/publications/calligraphy-echo-thumbnail.png" alt="A turning calligraphy brush gesture mapped to flute sound control" loading="lazy"></div>
+          <div class="t">Calligraphy Echo: Sonifying Chinese Calligraphy with MIDI-Enabled Brush</div>
+          <div class="a">Yizheng Xu, Kexin Nie, <b>Yufeng Wu</b>, Huiying Lu, Longyu Zhang</div>
+          <div class="v"><i>SIGGRAPH Asia Posters</i>, 2025.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3757374.3771497" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/calligraphy-echo.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+        </div>
+        <div class="pub">
+          <div class="thumb"><img src="assets/images/publications/unplug-mute-avoid-thumbnail.jpg" alt="Illustrated bedroom and study showing a smart speaker in a Saudi home context" loading="lazy"></div>
+          <div class="t">Unplug, Mute, Avoid: Investigating Smart Speaker Users' Privacy Protection Behaviours in Saudi Homes</div>
+          <div class="a">Abdulrhman Alorini, <b>Yufeng Wu</b>, Abdullah Bin Sawad, Mukesh Prasad, A. Baki Kocaballi</div>
+          <div class="v"><i>Australian Conference on Human-Computer Interaction (OzCHI)</i>, 2025.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3764687.3764688" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/smart-speaker-privacy-saudi-homes.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+        </div>
+        <div class="pub">
+          <div class="thumb thumb-flowchart"><img src="assets/images/publications/evaluating-user-experience-thumbnail.png" alt="Systematic review flowchart from database searching through screening to 23 included articles" loading="lazy"></div>
+          <div class="t">Evaluating User Experience in Conversational Recommender Systems: A Systematic Review Across Classical and LLM-Powered Approaches</div>
+          <div class="a">Raj Mahmud, <b>Yufeng Wu</b>, Abdullah Bin Sawad, Shlomo Berkovsky, Mukesh Prasad, A. Baki Kocaballi</div>
+          <div class="v"><i>Australian Conference on Human-Computer Interaction (OzCHI)</i>, 2025.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3764687.3764714" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/conversational-recommender-systems-review.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+        </div>
+        <div class="pub">
+          <div class="thumb"><img src="assets/images/publications/communication-disability-thumbnail.png" alt="Speech pathologists and conversational agents supporting people with communication disability" loading="lazy"></div>
+          <div class="t">Conversational Agents to Support People with Communication Disability: A Co-design Study with Speech Pathologists</div>
+          <div class="a">Fahad Khan, <b>Yufeng Wu</b>, Julia Dray, Bronwyn Hemsley, A. Baki Kocaballi</div>
+          <div class="v"><i>CHI Conference on Human Factors in Computing Systems, Extended Abstracts</i>, 2025.</div>
+          <div class="btns"><a class="btn" href="https://doi.org/10.1145/3706599.3719800" target="_blank" rel="noopener noreferrer">DOI</a><a class="btn" href="assets/publications/conversational-agents-communication-disability.pdf" target="_blank" rel="noopener noreferrer">PDF</a><a class="btn" href="assets/publications/communication-disability-chi-poster.jpg" target="_blank" rel="noopener noreferrer">Poster</a><a class="btn" href="https://www.youtube.com/watch?v=KnJ5X17AI6w" target="_blank" rel="noopener noreferrer">Video</a></div>
+        </div>
+        <div class="pub">
+          <div class="thumb thumb-nng" role="img" aria-label="Nurture NextGen logo on an abstract co-design and support network background"><img src="assets/images/publications/nurturenextgen-background.jpg" alt="" loading="lazy"><img class="thumb-logo" src="assets/images/publications/nurturenextgen-logo.png" alt=""></div>
+          <div class="t">NurtureNextGen: Co-designing a Digital Tool to Support Families of Children with Genetic Neurodevelopmental Conditions</div>
+          <div class="a"><b>Yufeng Wu</b>, Kate Davidson, Elise van den Hoven, Jasmeet Bedi, Julia Dray, Elizabeth Callinan, Erin Turbitt</div>
+          <div class="v"><i>Human Genetics Society of Australasia Annual Scientific Meeting</i>, 2025. Top Oral Presentation.</div>
+        </div>
+        <h4>2024</h4>
+        <div class="pub">
+          <div class="thumb"><img src="assets/images/publications/rememberme-thumbnail.png" alt="RememberMe workflow for personalised reminiscence therapy with an embodied conversational agent and life storybook" loading="lazy"></div>
+          <div class="t">RememberMe: An Embodied Conversational Agent for Reminiscence Therapy in Virtual Reality</div>
+          <div class="a"><b>Yufeng Wu</b>, Elise van den Hoven, A. Baki Kocaballi</div>
+          <div class="v"><i>Digital Health Week</i>, 2024.</div>
+          <div class="btns"><a class="btn" href="assets/publications/rememberme-dhw-poster.jpg" target="_blank" rel="noopener noreferrer">Poster</a><a class="btn" href="https://www.youtube.com/watch?v=wfoFOEiaIkY" target="_blank" rel="noopener noreferrer">Video</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---- EXPERIENCE TAB ---- -->
+    <div class="tabpane" id="tab-a-experience">
+      <div class="sec">
+        <div class="entry research-entry">
+          <span class="date">Jul 2023 - Present</span>
+          <div>
+            <div class="t">Ph.D. Researcher</div>
+            <div class="org">Human-Computer Interaction, <a href="https://www.uts.edu.au/" target="_blank" rel="noopener noreferrer">University of Technology Sydney</a></div>
+            <p><strong>Topic:</strong> Designing Generative AI-Mediated Personal Memory Technologies for Everyday Remembering and Reminiscence</p>
+            <div class="m"><strong>Supervisors:</strong> <a href="https://profiles.uts.edu.au/Baki.Kocaballi" target="_blank" rel="noopener noreferrer">A. Baki Kocaballi</a> &amp; <a href="https://profiles.uts.edu.au/Elise.VandenHoven" target="_blank" rel="noopener noreferrer">Elise van den Hoven</a></div>
+          </div>
+        </div>
+        <div class="entry research-entry">
+          <span class="date">Sep 2025 - Present</span>
+          <div>
+            <div class="t">Research Intern</div>
+            <div class="org"><a href="https://adelaide.edu.au/research/australian-research-centre-for-interactive-and-virtual-environments/" target="_blank" rel="noopener noreferrer">Australian Research Centre for Interactive and Virtual Environments</a>, The University of Adelaide</div>
+            <p>Investigating how affective touch can be designed for emotional engagement in interactive technologies, from a scoping review to design principles and prototypes</p>
+            <div class="m"><strong>Mentor:</strong> <a href="https://www.adelaide.edu.au/directory/ghazaleh.sepahpour" target="_blank" rel="noopener noreferrer">Ghazaleh Sepahpour</a></div>
+          </div>
+        </div>
+        <div class="entry research-entry">
+          <span class="date">Jan 2025 - Present</span>
+          <div>
+            <div class="t">Research Assistant</div>
+            <div class="org"><a href="https://nurturenextgen.research.uts.edu.au/" target="_blank" rel="noopener noreferrer">NurtureNextGen Project</a>, <a href="https://www.uts.edu.au/" target="_blank" rel="noopener noreferrer">University of Technology Sydney</a></div>
+            <p>Co-designing digital support with parents of children with genetic neurodevelopmental conditions, spanning interviews, co-design workshops, prototyping, and publications</p>
+            <div class="m"><strong>Supervisors:</strong> <a href="https://profiles.uts.edu.au/Erin.Turbitt" target="_blank" rel="noopener noreferrer">Erin Turbitt</a> &amp; <a href="https://profiles.uts.edu.au/Elise.VandenHoven" target="_blank" rel="noopener noreferrer">Elise van den Hoven</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---- TEACHING TAB ---- -->
+    <div class="tabpane" id="tab-a-teaching">
+      <div class="sec">
+        <h3>Courses</h3>
+        <div class="cards">
+          <div class="card">
+            <div class="ph photo-ids"><img src="assets/images/teaching/interaction-design-studio.jpg" alt="Interaction Design Studio class group photograph" loading="lazy"></div>
+            <div class="cite"><b>Interaction Design Studio</b> (Capstone Project)<br>Tutor · University of Technology Sydney<br><span style="color:var(--dim)">Spring 2024 · Spring 2025 · Autumn 2026 · Spring 2026</span></div>
+          </div>
+          <div class="card">
+            <div class="ph"><img src="assets/images/teaching/human-centred-design-research-methods.jpg" alt="Students sharing and discussing research activities in Human-Centred Design Research Methods" loading="lazy"></div>
+            <div class="cite"><b>Human-Centred Design Research Methods</b><br>Tutor · University of Technology Sydney<br><span style="color:var(--dim)">Spring 2024 · Spring 2025 · Spring 2026</span></div>
+          </div>
+          <div class="card">
+            <div class="ph photo-fid"><img src="assets/images/teaching/fundamentals-of-interaction-design.jpg" alt="Students developing interface sketches together in Fundamentals of Interaction Design" loading="lazy"></div>
+            <div class="cite"><b>Fundamentals of Interaction Design</b><br>Tutor · University of Technology Sydney<br><span style="color:var(--dim)">Autumn 2024 · Autumn 2025 · Autumn 2026</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sec">
+        <h3>Supervision &amp; Mentoring</h3>
+        <div class="entry"><span class="t">Ineshka De Mel:</span> 2026 Bachelor of Computing Science (Honours), Interaction Design, University of Technology Sydney, Co-supervisor</div>
+        <div class="entry"><span class="t">Jonathan Werner:</span> 2024 Bachelor of Computing Science (Honours), Interaction Design, University of Technology Sydney, Co-supervisor</div>
+      </div>
+    </div>
+
+    <!-- ---- SERVICE TAB ---- -->
+    <div class="tabpane" id="tab-a-service">
+      <div class="sec">
+        <h3>Service</h3>
+        <div class="entry"><span class="date">2027</span>Proceedings Chair, ACM Tangible, Embedded and Embodied Interaction (TEI).</div>
+        <div class="entry"><span class="date">2026</span>Organising Committee, Oceania CHI.</div>
+        <div class="entry"><span class="date">2025</span>Student Volunteer, ACM OzCHI.</div>
+        <div class="entry"><span class="date">2023</span>Student Volunteer, ACM SIGGRAPH Asia.</div>
+      </div>
+      <div class="sec">
+        <h3>Review</h3>
+        <div class="entry">Reviewer, Frontiers in Human Dynamics.</div>
+        <div class="entry">Reviewer, CHI 2026.</div>
+        <div class="entry">Reviewer, OzCHI 2026.</div>
+        <div class="entry">Reviewer, CHI 2025.</div>
+        <div class="entry">Reviewer, OzCHI 2025.</div>
+      </div>
+    </div>
+
+    <!-- ---- AWARDS TAB ---- -->
+    <div class="tabpane" id="tab-a-awards">
+      <div class="sec">
+        <h3>Awards</h3>
+        <div class="entry"><span class="date">2026</span>Vice-Chancellor's Conference Fund (A$3,000), University of Technology Sydney.</div>
+        <div class="entry"><span class="date">2025</span>Top Oral Presentation, HGSA Annual Scientific Meeting.</div>
+        <div class="entry"><span class="date">2023</span>Pratt Circle Award, Pratt Institute.</div>
+        <div class="entry"><span class="date">2019</span>Presidential Scholarship, Tiangong University.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIDE B ================= -->
+<section class="page" id="page-design">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="sub">
+    <h1>Side B: Design</h1>
+    <p class="bio">I am an interaction designer working across printed matter and interactive experiences, including interfaces, visual identities, books, and installations. I care about how a design works and how it feels, from the structure of an interaction to the smallest visual detail.</p>
+
+    <nav class="tabs" role="tablist">
+      <button class="on" data-tab="b-projects">Projects</button>
+      <button data-tab="b-experience">Experience</button>
+      <button data-tab="b-awards">Awards</button>
+    </nav>
+
+    <!-- ---- PROJECTS TAB ---- -->
+    <div class="tabpane on" id="tab-b-projects">
+      <div class="projects-grid">
+        <h2 class="project-category">Interactive Experiences</h2>
+        <a class="proj" href="#/design/groupthink">
+          <div class="ph"><canvas class="gt-thumb-canvas" aria-hidden="true"></canvas></div>
+          <h2>GROUPTHINK</h2>
+          <div class="m">Animation, interaction and print · 2023</div>
+          <p>A flocking simulation about following the group and thinking for yourself.</p>
+        </a>
+        <a class="proj" href="#/design/transformation">
+          <div class="ph"><img src="assets/images/projects/transformation/weight-of-choice-card.jpg" alt="Pixel-art autonomous vehicle carrying two character tokens on a road" loading="lazy"></div>
+          <h2>The Weight of Choice</h2>
+          <div class="m">Cultural probe and game design · 2022</div>
+          <p>A cultural probe that made AI moral dilemmas tangible before becoming the basis for iCommand.</p>
+        </a>
+        <a class="proj" href="#/design/wave">
+          <div class="ph"><canvas class="wave-canvas" data-wave-mode="thumbnail" aria-hidden="true"></canvas></div>
+          <h2>Wave</h2>
+          <div class="m">Generative installation and creative coding · 2022</div>
+          <p>A field of characters from Su Shi's <i>First Rhapsody on the Red Cliffs</i>, carried by a continuous noise current.</p>
+        </a>
+        <a class="proj" href="#/design/star-echo">
+          <div class="ph"><img src="assets/images/projects/star-echo/project-card.jpg" alt="Star Echo audiovisual installation mockup with a colourful circular voice visualisation" loading="lazy"></div>
+          <h2>Star Echo</h2>
+          <div class="m">Interactive installation and voice visualisation · 2021</div>
+          <p>An imagined conversation with the solar system, shaped by voice, sonification, colour, and vibration.</p>
+        </a>
+
+        <h2 class="project-category">User Experience</h2>
+        <a class="proj" href="#/design/brainfit">
+          <div class="ph"><img src="assets/images/projects/brainfit/project-card.jpg" alt="An older adult using the BrainFit app on a smartphone" loading="lazy"></div>
+          <h2>BrainFit</h2>
+          <div class="m">UI/UX, service concept and training kit · 2021</div>
+          <p>An early concept for making cognitive concerns and everyday training easier to approach with families.</p>
+        </a>
+        <a class="proj" href="#/design/homing">
+          <div class="ph"><img src="assets/images/projects/homing/project-card.jpg" alt="Homing app screens for mood, letters and family communication" loading="lazy"></div>
+          <h2>Homing</h2>
+          <div class="m">UI/UX and service concept · 2021</div>
+          <p>An early exploration of care, menopause, and communication across generations.</p>
+        </a>
+
+        <h2 class="project-category">Brand</h2>
+        <a class="proj" href="#/design/nailit">
+          <div class="ph"><img src="assets/images/projects/nailit/project-card.jpg" alt="NAILIT identity mark framed against a misty forest image" loading="lazy"></div>
+          <h2>NAILIT</h2>
+          <div class="m">Brand creation · 2024</div>
+          <p>Naming, identity, packaging, and art direction for a press-on nail startup.</p>
+        </a>
+        <a class="proj" href="#/design/ego-camping">
+          <div class="ph"><img src="assets/images/projects/ego-camping/project-card.jpg" alt="EGO Camping identity set over a grassy landscape with a mirror reflecting the sky" loading="lazy"></div>
+          <h2>EGO Camping</h2>
+          <div class="m">Brand identity and experience · 2022</div>
+          <p>A calm, minimal identity for a campsite, outdoor programme, and seasonal events.</p>
+        </a>
+        <a class="proj" href="#/design/devil-fruit">
+          <div class="ph"><img src="assets/images/projects/devilfruit/project-card.jpg" alt="Six Devil Fruit bottles in a colour lineup" loading="lazy"></div>
+          <h2>Devil Fruit / 恶魔果实</h2>
+          <div class="m">Brand identity and packaging · 2022</div>
+          <p>A rebrand for a fruit-wine label that keeps the devil and gives it a system.</p>
+        </a>
+        <a class="proj" href="#/design/benlai-art-education">
+          <div class="ph"><img src="assets/images/projects/benlai-art-education/project-card.jpg" alt="Stay Real Art and Benlai Art Education eye-form identity construction" loading="lazy"></div>
+          <h2>Stay Real Art / 本来计画</h2>
+          <div class="m">Rebrand · 2021</div>
+          <p>A complete rebrand for a Tianjin children’s art education institution, built around the idea of opening eyes.</p>
+        </a>
+
+        <h2 class="project-category">Editorial, Books &amp; Print</h2>
+        <a class="proj" href="#/design/1024">
+          <div class="ph"><img src="assets/images/projects/1024/hero.jpg" alt="The [1,0,2,4] interactive book arranged on a black background" loading="lazy"></div>
+          <h2>[1,0,2,4]</h2>
+          <div class="m">Interactive book and game · 2023 · MFA thesis</div>
+          <p>A publication that unfolds into a board game about human judgment, AI, and responsibility.</p>
+        </a>
+        <a class="proj" href="#/design/exit">
+          <div class="ph"><img src="assets/images/projects/exit/hero.jpg" alt="The spiral-bound EXIT book standing against a pale studio background" loading="lazy"></div>
+          <h2>EXIT</h2>
+          <div class="m">Book, photography and motion · 2023</div>
+          <p>A study of how signs, thresholds, and architecture direct the body and unsettle the mind.</p>
+        </a>
+        <a class="proj" href="#/design/modern-underground">
+          <div class="ph"><img src="assets/images/projects/modern-underground/cover-stack.png" alt="Stacked copies of Modern Underground, a newspaper-like exhibition guide" loading="lazy"></div>
+          <h2>Modern Underground</h2>
+          <div class="m">Exhibition guide and editorial print · 2022</div>
+          <p>A newspaper-like guide and reflection inspired by E. McKnight Kauffer’s modernist posters.</p>
+        </a>
+        <a class="proj" href="#/design/mosscube">
+          <div class="ph"><img src="assets/images/projects/mosscube/project-card.jpg" alt="MOSSCUBE installation catalogue on a city grate, with transparent moss habitats" loading="lazy"></div>
+          <h2>MOSSCUBE</h2>
+          <div class="m">Installation and publication · 2022</div>
+          <p>An installation and book that bring overlooked urban moss into view as a shared ecology.</p>
+        </a>
+
+        <h2 class="project-category">Campaign &amp; Communication</h2>
+        <a class="proj" href="#/design/lalaland">
+          <div class="ph"><img src="assets/images/projects/lalaland/project-card.jpg" alt="La La Land title treatment in purple on a bright yellow background" loading="lazy"></div>
+          <h2>La La Land: Title Sequence</h2>
+          <div class="m">Illustration and motion · 2023</div>
+          <p>A reimagined animated opening for <i>La La Land</i>, built from illustrated scenes and music.</p>
+        </a>
+        <a class="proj" href="#/design/whitney">
+          <div class="ph"><img src="assets/images/projects/whitney/poster.jpg" alt="Hanging exhibition banner for a Whitney Museum graphic extension study" loading="lazy"></div>
+          <h2>Whitney: Projection System</h2>
+          <div class="m">Identity extension and exhibition collateral · 2023</div>
+          <p>A graphic system that gives the Whitney W depth, shadow, and a new scale across exhibition materials.</p>
+        </a>
+        <a class="proj" href="#/design/order">
+          <div class="ph"><img src="assets/images/projects/order/order-card.jpg" alt="The word ORDER set in the ORDER typeface, white on black" loading="lazy"></div>
+          <h2>ORDER</h2>
+          <div class="m">Typeface · 2023</div>
+          <p>A display typeface in two weights, cut from single shapes and their shadows.</p>
+        </a>
+        <a class="proj" href="#/design/douyin">
+          <div class="ph"><img src="assets/images/projects/douyin/douyin-project-card.jpg" alt="Douyin E-commerce Fresh Livestream Guide graphic with a collection of fresh-produce guide pages" loading="lazy"></div>
+          <h2>Douyin Fresh Livestream Guides</h2>
+          <div class="m">Content template system · 2021</div>
+          <p>One fill-in template that gives every product category a single, consistent voice.</p>
+        </a>
+        <a class="proj" href="#/design/kuaishou-alliance">
+          <div class="ph"><img src="assets/images/projects/kuaishou-alliance/project-card.jpeg" alt="Light-blue Kuaishou Alliance visual with orbital forms and orange spheres" loading="lazy"></div>
+          <h2>Kuaishou Alliance Ecosystem Conference</h2>
+          <div class="m">Event key visual and presentation design · 2021</div>
+          <p>A Blender-built visual system for a conference about developers, connection, and shared momentum.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- ---- EXPERIENCE TAB ---- -->
+    <div class="tabpane" id="tab-b-experience">
+      <div class="sec">
+        <div class="entry"><span class="date">2024</span><span class="t">Design Lead, NAILIT</span><br><span class="m">Sydney, Australia · Jan 2024 - Jul 2024</span></div>
+        <div class="entry"><span class="date">2021</span><span class="t">Brand Designer, Baron Design Studio</span><br><span class="m">Tianjin, China · Jan 2021 - Sep 2021</span></div>
+        <div class="entry"><span class="date">2020</span><span class="t">UI/UX Designer, Tencent · Internship</span><br><span class="m">Beijing, China · May 2020 - Sep 2020</span></div>
+        <div class="entry"><span class="date">2020</span><span class="t">User Interface Designer, iFLYTEK Co., Ltd. · Internship</span><br><span class="m">Hefei, China · Feb 2020 - Apr 2020</span></div>
+      </div>
+    </div>
+
+    <!-- ---- AWARDS TAB ---- -->
+    <div class="tabpane" id="tab-b-awards">
+      <div class="sec">
+        <div class="entry"><span class="date">2022</span>Design works listed in AAA Visual Art Exhibition.</div>
+        <div class="entry"><span class="date">2021</span>Third Prize, Tencent National University Mini-programme Design Competition.</div>
+        <div class="entry"><span class="date">2019</span>First Prize, China College Students' Internet Plus Innovation and Entrepreneurship Competition.</div>
+        <div class="entry"><span class="date">2019</span>Champion, National Takeda Medical &amp; Nursing Innovation Competition.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: [1,0,2,4] ================= -->
+<section class="page" id="page-project-1024">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">MFA thesis, 2023</p>
+    <h1>[1,0,2,4]</h1>
+    <p class="case-sub">An interactive book and board game about the choices people delegate to AI and the responsibility they retain.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Research, concept, editorial and interaction design</div>
+      <div><span class="k">Advisor</span>Asad Pervaiz</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/1024/hero.jpg" alt="The [1,0,2,4] interactive book, inserts, and numbered pages arranged as a system"></div>
+      <p class="cs-caption">The thesis is designed as a set of nested publications, movable pages, and game components.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>The question</h3>
+      <p>AI is often treated as a neutral source of answers. In practice, it learns from human data, behavior, values, and bias. This thesis asks what happens when people hand decisions to a system that can calculate but cannot accept responsibility for the outcome.</p>
+      <p>My position is not that people should reject AI. AI can help us process complexity, but judgment and accountability remain human. I used communication design to turn that argument into something readers could handle, rearrange, and discuss.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img r43"><img src="assets/images/projects/1024/research-questions.jpg" alt="A small thesis booklet showing three research questions beside oversized numbered pages" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>Research into form</h3>
+        <p>The project began with research into the history of AI decision-making, ethical responsibility, and the limits of automated judgment. Three questions structure the inquiry: how AI changes decision-making, how it should handle ethical questions, and how visual communication can help people examine these issues.</p>
+        <p>Instead of presenting the thesis as a single linear volume, I divided it into layers. Different page sizes, spiral bindings, loose inserts, and oversized numbers make the reader uncover relationships across the argument.</p>
+      </div>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/1024/book-open.jpg" alt="The interactive book open to overlapping pages and the printed thesis booklet" loading="lazy"></div>
+        <p class="cs-caption">Reading becomes a physical act of opening, comparing, and repositioning information.</p>
+      </div>
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/1024/game-components.jpg" alt="Colorful printed game sheet and book components on a black surface" loading="lazy"></div>
+        <p class="cs-caption">The modular visual system carries the project from publication into play.</p>
+      </div>
+    </div>
+
+    <div class="cs-split rev">
+      <div class="cs-img r43"><img src="assets/images/projects/1024/game-instructions.jpg" alt="Game instruction spread with pixel-style player and non-player figures" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>From book to game</h3>
+        <p>The book opens beyond its binding and becomes a board. The game requires at least two players and one non-player, moving the thesis from private reading into shared negotiation.</p>
+        <p>Roles, commands, and instructions ask participants to make choices together. AI is not presented as an unquestioned answer, but as one part of a decision in which people still need to interpret, disagree, and take responsibility.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/1024/board.jpg" alt="The publication fully unfolded into a dark gridded game board" loading="lazy"></div>
+      <p class="cs-caption">Fully unfolded, the book becomes the playing surface.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Visual language</h3>
+      <p>The black ground and restricted palette of blue, red, yellow, and white give the project the logic of a system. Brackets, grids, numbers, and command-like phrases suggest calculation and control, while the changing paper formats keep the experience tactile and visibly human.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Exhibition</h3>
+      <p>[1,0,2,4] was exhibited at <a href="https://www.pratt.edu/pratt-shows/pratt-shows-2023/" target="_blank" rel="noopener noreferrer">Pratt Shows 2023</a>, Pratt Institute's public exhibition series for its graduating class. The installation brought the book, game components, and large-format graphics together as one system.</p>
+    </div>
+
+    <div class="cs-duo exhibition">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/1024/pratt-shows-detail.jpg" alt="Detail of the [1,0,2,4] book displayed in front of the exhibition graphics" loading="lazy"></div>
+        <p class="cs-caption">The book and printed components within the exhibition display.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/1024/pratt-shows-overview.jpg" alt="Full [1,0,2,4] installation at Pratt Shows 2023" loading="lazy"></div>
+        <p class="cs-caption">The full installation at Pratt Shows 2023.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Exhibition graphics</h3>
+      <p>The display extended the publication's visual system into large-format panels, connecting the project's argument, game instructions, and physical components across the installation.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/1024/exhibition-statement.jpg" alt="Red, blue, yellow, and white statement panels designed for the [1,0,2,4] exhibition" loading="lazy"></div>
+      <p class="cs-caption">Statement panels exploring human responsibility in AI decision-making.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/1024/exhibition-rules.jpg" alt="Rules and play instructions designed for the [1,0,2,4] exhibition" loading="lazy"></div>
+      <p class="cs-caption">Rules and play instructions for the exhibition display.</p>
+    </div>
+
+    <div class="cs-video">
+      <video controls playsinline preload="metadata" poster="assets/images/projects/1024/board-details.jpg">
+        <source src="assets/media/projects/1024/1024-book.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/exit">Next: EXIT →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: EXIT ================= -->
+<section class="page" id="page-project-exit">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Editorial design, photography and motion, 2023</p>
+    <h1>EXIT</h1>
+    <p class="case-sub">A book that turns signs, corridors, and urban fragments into a study of direction, attention, and unease.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Concept, photography, editorial design and motion</div>
+      <div><span class="k">Format</span>Spiral-bound book and animation</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/exit/hero.jpg" alt="The spiral-bound EXIT book standing against a pale studio background"></div>
+      <p class="cs-caption">The translucent cover catches a familiar command and holds it between object and image.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>A sign before thought</h3>
+      <p>EXIT began with a familiar piece of visual language: the emergency exit sign. It is designed to be read instantly, yet its effect is not neutral. A door, an arrow, or a strip of red type can redirect the body before conscious thought catches up.</p>
+      <p>The project follows that signal through photography, page sequence, and motion. Signs repeat, enlarge, blur, and disappear. The book asks how graphic systems shape not only the way we navigate a city, but also the way its spaces feel.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img r169"><img src="assets/images/projects/exit/book-in-hand.jpg" alt="A hand turning the black pages of the spiral-bound EXIT book" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>Reading as movement</h3>
+        <p>The spiral binding lets the book behave like a sequence of frames. Photographs, diagrams, signs, and blank architectural planes create cuts and pauses. Turning a page begins to resemble moving through a building, where each threshold reveals another instruction or another doubt.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r24"><img src="assets/images/projects/exit/sequence-architecture.jpg" alt="An EXIT book spread showing a black door and a stark modernist interior" loading="lazy"></div>
+      <p class="cs-caption">A functional sign becomes a compositional device, then an expectation.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/exit/sequence-gaze.jpg" alt="An EXIT book spread pairing a half-closed eye with a blurred exit sign" loading="lazy"></div>
+        <p class="cs-caption">Looking, missing, and looking again.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/exit/sequence-watch.jpg" alt="An EXIT book spread pairing a red eye with a distorted corridor photograph" loading="lazy"></div>
+        <p class="cs-caption">The city shifts between a place we observe and a place that observes us.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>The ordinary made uncertain</h3>
+      <p>The visual direction grew from my interest in semiotics, horror films, and modernist architecture. Horror can make an ordinary corridor feel charged before anything happens. Modernism gives the same corridor order, repetition, and control. EXIT sits in the tension between those two readings, using a language of safety to produce a quiet sense of unease.</p>
+    </div>
+
+    <div class="cs-video">
+      <video controls playsinline muted loop preload="metadata" poster="assets/images/projects/exit/sequence-architecture.jpg">
+        <source src="assets/media/projects/exit/exit-motion.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+    </div>
+
+    <div class="cs-split rev">
+      <div class="cs-img r24"><img src="assets/images/projects/exit/sequence-red.jpg" alt="An EXIT book spread where a small door faces a blurred red architectural image" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>From page to time</h3>
+        <p>The animation extends the rhythm of the publication. Pages become doors, cropped signs interrupt the frame, and the red EXIT mark changes from instruction into atmosphere. Motion makes the act of orientation less stable: the way out is always visible, but never quite still.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Other Islands Book Fair</h3>
+      <p>EXIT was shown at <a href="https://www.veralistcenter.org/announcement/other-islands-book-fair-2023" target="_blank" rel="noopener noreferrer">Other Islands Book Fair 2023</a> at Pratt Institute. The fair brought together independent publishers, designers, artists, zine makers, and bookshops around printed matter as a way to circulate ideas and build communities.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/groupthink">Next: GROUPTHINK →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: GROUPTHINK ================= -->
+<section class="page" id="page-project-groupthink">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Animation, interaction and print, 2023</p>
+    <h1>GROUPTHINK</h1>
+    <p class="case-sub">A flocking simulation turned into animation, interaction, and printed cards, about following the group and thinking for yourself.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Concept, code, motion and print design</div>
+      <div><span class="k">Format</span>Interactive simulation, animation and print</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-live" id="gt-live">
+        <canvas id="gt-canvas" aria-label="Live flocking simulation: white triangles move across a black field and react to the cursor"></canvas>
+        <div class="gt-title" aria-hidden="true">GROUPTHINK</div>
+      </div>
+      <p class="cs-caption">The simulation runs live on this page, ported from my original Processing sketch. Move your cursor: the flock follows from a distance and scatters up close.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>The idea</h3>
+      <p>GROUPTHINK began with a flocking simulation I wrote in Processing. Each triangle follows three rules: keep your distance, match your neighbours, stay with the group (Reynolds, 1987). No one leads, but the crowd moves as one. Psychologists describe the human version as groupthink: the wish for harmony in a group overrides individual judgment (Janis, 1972).</p>
+      <p>I used the simulation as raw material for a motion sequence, an interactive piece, and a set of printed cards. The flock plays the group. Short statements play the individual.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img r169"><img src="assets/images/projects/groupthink/groupthink-right.jpeg" alt="Framed black screen of flocking triangles with the statement: most people aren't always right" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>The statements</h3>
+        <p>The statements interrupt the animation and push back against the flock: <i>most people aren't always right.</i> They are set in the same plain type as everything else, so the dissent comes from the words, not the styling.</p>
+      </div>
+    </div>
+
+    <div class="cs-split rev">
+      <div class="cs-img r169"><img src="assets/images/projects/groupthink/groupthink-distance.jpeg" alt="Flocking triangles with the statement: keeping your distance is not being out of line" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>The rules</h3>
+        <p>Each rule reads two ways. As code, separation is a steering force. As a sentence, it is advice: <i>keeping your distance is not being out of line.</i></p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/groupthink/groupthink-cards.jpeg" alt="Black statement cards from GROUPTHINK hanging on strings with paperclips" loading="lazy"></div>
+      <p class="cs-caption">The statements as a printed card series.</p>
+    </div>
+
+    <div class="cs-text">
+      <p class="cs-refs">Craig W. Reynolds. 1987. Flocks, Herds, and Schools: A Distributed Behavioral Model. <i>Computer Graphics</i> 21(4), SIGGRAPH '87, 25–34.<br>Irving L. Janis. 1972. <i>Victims of Groupthink</i>. Houghton Mifflin.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/whitney">Next: Whitney: Projection System →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: WHITNEY ================= -->
+<section class="page" id="page-project-whitney">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Identity extension and exhibition collateral, 2023</p>
+    <h1>Whitney: Projection System</h1>
+    <p class="case-sub">A graphic extension study that turns the Whitney W into a field of shadows, scale, and exhibition material.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>Brand extension study for the Whitney Museum of American Art</div>
+      <div><span class="k">Role</span>Concept, visual identity, exhibition graphics and collateral</div>
+      <div><span class="k">Outputs</span>Poster, publication, T-shirt and tote bag</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/whitney/poster.jpg" alt="Hanging banner for the exhibition Ongoing, Individual Adaptability or How to Quiet" loading="eager"></div>
+      <p class="cs-caption">The graphic system anchors the exhibition banner in a single, oversized W-derived composition.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Giving the W a body</h3>
+      <p>The Whitney W is normally a precise line. I treated that line as the edge of a folded form. Once it has depth, light can strike it and cast a second set of shapes. The shadow becomes the extension: recognisable as Whitney, but no longer confined to the original outline.</p>
+      <p>Rather than redrawing the mark, the system lets its planes crop, repeat, and shift in scale. The result is a visual field with the directness of signage and the physical presence of an exhibition object.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/whitney/mark-to-shadow.jpg" alt="Diagram showing the Whitney W changing from a two-dimensional line into a three-dimensional shadow form" loading="lazy"></div>
+        <p class="cs-caption">A line becomes a plane, then a projection system.</p>
+      </div>
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/whitney/graphic-system.jpg" alt="Large black and grey Whitney W-derived forms arranged as a graphic system" loading="lazy"></div>
+        <p class="cs-caption">The projected forms can fill a surface, recede, or become a structural crop for information.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/whitney/editorial-collateral.jpg" alt="Whitney exhibition publication, cards, and printed collateral arranged on a dark surface" loading="lazy"></div>
+      <p class="cs-caption">The identity carries through the exhibition publication, invitation, and printed cards.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>An exhibition with its own rhythm</h3>
+      <p>For the proposed exhibition, <i>Ongoing, Individual Adaptability or How to Quiet</i>, the mark creates a strong frame without becoming a decorative backdrop. Black planes hold the title and artist information. Lighter projections open space for images, captions, and the slower pace of the publication.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/whitney/t-shirt.jpg" alt="White T-shirt printed with the black and grey Whitney projection graphic" loading="lazy"></div>
+        <p class="cs-caption">A wearable version of the exhibition identity.</p>
+      </div>
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/whitney/tote.jpg" alt="White tote bag with an orange handle printed with the Whitney projection graphic" loading="lazy"></div>
+        <p class="cs-caption">The tote carries the system beyond the gallery, with orange used as the single material accent.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/whitney/identity-poster.jpg" alt="Vertical poster applying the Whitney projection system with the museum name" loading="lazy"></div>
+      <p class="cs-caption">A compact application of the system for a poster and merchandise graphic.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/order">Next: ORDER →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: ORDER ================= -->
+<section class="page" id="page-project-order">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Typeface design, 2023</p>
+    <h1>ORDER</h1>
+    <p class="case-sub">A display typeface in two weights, built from single shapes and the shadows that swallow their counters.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Type design</div>
+      <div><span class="k">Format</span>Display typeface, two weights</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/order/order-thumb.png" alt="The word ORDER set in the ORDER typeface, white on black" loading="eager"></div>
+      <p class="cs-caption">ORDER in its final display form.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>The idea</h3>
+      <p>ORDER began with shadows cast by letters cut from kitchen sponges. Their counters collapsed into thin slits, leaving each letter to read through silhouette. I rebuilt that effect as a display typeface, with glyphs cut from single shapes and joined by the same rounded corners.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img r43"><img src="assets/images/projects/order/order-process.jpg" alt="Process photographs: sponge letters spelling CONTROL, their shadows on a wall, and early sketches" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>Drawing rule</h3>
+        <p>The narrow gaps between strokes became the rule for the whole alphabet. They hold the counters open just enough for each letter to remain legible while keeping the silhouette dense.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/order/order-control.png" alt="Three stages of the word CONTROL: rough draft, first digital version, final letterforms" loading="lazy"></div>
+      <p class="cs-caption">The CONTROL test moved from a rough draft to the final letterforms.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Two weights</h3>
+      <p>Regular keeps the counters as narrow channels. Bold compresses them into tighter slits and pushes the silhouette further.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/order/order-specimen-regular.png" alt="ORDER Regular specimen: full uppercase alphabet and numerals with narrow counters" loading="lazy"></div>
+        <p class="cs-caption">Regular</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/order/order-specimen-bold.png" alt="ORDER Bold specimen: full uppercase alphabet and numerals with heavier forms and narrow counters" loading="lazy"></div>
+        <p class="cs-caption">Bold</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>In use</h3>
+      <p>To test the voice of the typeface I designed OHJA Drinks, a small beverage brand. The wordmark and the labels are set entirely in ORDER. A face this loud does not need much company: one colour per flavour, and the letters do the rest.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/order/order-label-green.jpg" alt="OHJA Drinks label in green" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/order/order-label-purple.jpg" alt="OHJA Drinks label in purple" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r1x1"><img src="assets/images/projects/order/order-bottles.jpg" alt="Three OHJA Drinks bottles with labels set entirely in the ORDER typeface" loading="lazy"></div>
+      <p class="cs-caption">OHJA Drinks, a fictional beverage brand set entirely in ORDER.</p>
+    </div>
+
+    <div class="cs-text">
+      <p class="cs-refs">Aldo Novarese. 1971. <i>Stop</i>. Turin: Nebiolo.<br>Berton Hasebe. 2014. <i>Druk</i>. New York: Commercial Type.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/transformation">Next: The Weight of Choice →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: THE WEIGHT OF CHOICE ================= -->
+<section class="page" id="page-project-transformation">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Cultural probe and game design, 2022</p>
+    <h1>The Weight of Choice</h1>
+    <p class="case-sub">A cultural probe that made autonomous-vehicle dilemmas physical, personal, and open to debate.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Research, concept, interaction and game design</div>
+      <div><span class="k">Participants</span>12 people</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/transformation/scene-building-board.jpg" alt="Blank cultural probe board beside its character, vehicle, traffic-light, direction, and barricade components" loading="eager"></div>
+      <p class="cs-caption">The first group began with an empty road, a set of pieces, and a question about responsibility.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Design the dilemma</h3>
+      <p>The Weight of Choice was an early investigation into AI decision-making. I recruited a first group of participants and invited them to use a tabletop game system to build situations involving an autonomous vehicle on the road.</p>
+      <p>The system included a road board, vehicle cards, character tokens, traffic lights, direction arrows, barriers, and movement markers. Participants used these pieces to decide who was present, how the vehicle moved, what rules applied, and where a collision or blockage might occur. Together, the components turned a general moral question into a specific situation that could be discussed.</p>
+    </div>
+
+    <div class="cs-quad">
+      <div class="cs-img r1x1"><img src="assets/images/projects/transformation/board-state-a.jpg" alt="First participant-designed cultural probe scenario with character tokens and traffic signals" loading="lazy"></div>
+      <div class="cs-img r1x1"><img src="assets/images/projects/transformation/cultural-probe-board.jpg" alt="Second participant-designed cultural probe scenario with a car, crossing, and move cards" loading="lazy"></div>
+      <div class="cs-img r1x1"><img src="assets/images/projects/transformation/board-state-c.jpg" alt="Third participant-designed cultural probe scenario with different character tokens" loading="lazy"></div>
+      <div class="cs-img r1x1"><img src="assets/images/projects/transformation/board-state-d.jpg" alt="Fourth participant-designed cultural probe scenario with multiple decision components" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Turn scenarios into a kit</h3>
+      <p>I selected several scenarios created by the first group and turned them into illustrated scenario cards. Together with the board, component sheet, and response fields, the cards became a cultural-probe kit for a second group of participants.</p>
+      <p>The second group worked through each scenario, recorded the route they would choose, and explained their reasoning. This made it possible to compare how people responded to dilemmas that had first been built by other participants.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/transformation/dilemma-case-a.jpg" alt="Pixel-art scenario card showing a self-driving car facing two harmful outcomes" loading="lazy"></div>
+        <p class="cs-caption">One scenario card derived from the first group's arrangement.</p>
+      </div>
+      <div>
+        <div class="cs-img r169"><img src="assets/images/projects/transformation/dilemma-card.jpg" alt="Pixel-art scenario card showing a second self-driving car dilemma" loading="lazy"></div>
+        <p class="cs-caption">Another card changes who is present and the context around the decision.</p>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/transformation/probe-kit.jpg" alt="Printed cultural probe boards, scenario cards, component sheet, pen, and response fields arranged on a table" loading="lazy"></div>
+      <p class="cs-caption">The kit combined scenario cards, a component sheet, response fields, and a physical board.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/transformation/participant-experience.jpg" alt="Participants using the cultural probe kit, moving pieces and writing responses" loading="lazy"></div>
+      <p class="cs-caption">A second group worked through the scenarios, recorded a choice, and discussed their reasons.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>From cultural probe to iCommand</h3>
+      <p>The two stages showed that a moral decision does not sit with one person alone. It is shaped by the person who frames the scenario, the people who interpret it, and those affected by the outcome.</p>
+      <p>That observation led to iCommand, a game where players write instructions that affect one another and a non-player reads the command sheets aloud. It later became one foundation for <a href="#/design/1024">[1,0,2,4]</a>.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/transformation/icommand-wordmark-study.png" alt="Typographic study showing the I COMMAND wordmark progressively distorted" loading="lazy"></div>
+        <p class="cs-caption">A visual study for iCommand, where repetition begins to disrupt the word itself.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/transformation/icommand-command-pattern.png" alt="Colour pattern study built from repeated I COMMAND wordmarks" loading="lazy"></div>
+        <p class="cs-caption">A repeated command becomes a graphic field of overlapping voices.</p>
+      </div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/wave">Next: Wave →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: WAVE ================= -->
+<section class="page" id="page-project-wave">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Generative installation and creative coding, 2022</p>
+    <h1>Wave</h1>
+    <p class="case-sub">A public installation where bodies stir a current of text from Su Shi's <i>First Rhapsody on the Red Cliffs</i>.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Concept, visual design and creative coding</div>
+      <div><span class="k">Format</span>Interactive installation and generative animation</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="wave-live" id="wave-live">
+        <canvas class="wave-canvas" data-wave-mode="installation" aria-label="Generative field of traditional Chinese characters moving through Perlin noise.">Your browser does not support Canvas.</canvas>
+      </div>
+      <p class="cs-caption">Characters emerge, gather, and dissolve as a continuous Perlin noise field moves through the text.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Beginning in public space</h3>
+      <p>Wave began as a proposal for a public artwork embedded in places of movement, such as railway concourses and metro stations. I wanted the work to respond without asking people to touch a screen or learn an interface. The pace, direction, and proximity of passing bodies would become inputs to the moving image.</p>
+      <p>When no one is nearby, the screen follows its own slow current. As people approach or cross in front of it, their movement disturbs that current, allowing the wave to gather, separate, or change direction. The encounter can be brief and incidental, but each passerby temporarily leaves a trace in the field.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/wave/public-installation-concourse.jpg" alt="Wave public installation proposal displayed on a freestanding digital screen in a railway concourse" loading="lazy"></div>
+        <p class="cs-caption">Freestanding screen concept for a railway concourse.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/wave/public-installation-metro.jpg" alt="Wave public installation proposal integrated into a vertical screen inside a metro station" loading="lazy"></div>
+        <p class="cs-caption">Integrated vertical display concept for a metro station.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Choosing text as the material</h3>
+      <p>The installation needed a visual language that could be recognised before it was fully read. I chose Chinese characters as both written language and moving form. They connect the digital surface to a longer visual and literary tradition while remaining flexible enough to behave like texture, rhythm, and water.</p>
+      <p><i>First Rhapsody on the Red Cliffs</i> gave that decision a specific source. Written in 1082 during Su Shi's years in Huangzhou, the work follows a night journey on the Yangtze through wind, moonlight, reflection, and flowing water. It moves between exhilaration, grief, and acceptance while reflecting on change, continuity, and the scale of a human life.</p>
+      <p>I read its emotional movement as wave-like. Wave removes the essay from a fixed reading path, allowing its characters to surface in fragments, drift together, and dissolve back into the larger field.</p>
+    </div>
+
+    <figure class="wave-quote">
+      <blockquote><span>“清風徐來，水波不興。”</span><span>“A cool wind blew gently, without starting a ripple.”</span></blockquote>
+      <cite>Su Shi, <i>The Red Cliff, Part I</i>, 1082 · English translation published in Cyril Birch (ed.), <i>Anthology of Chinese Literature</i>, 1965</cite>
+    </figure>
+
+    <div class="cs-text">
+      <h3>From literary text to moving field</h3>
+      <p>The visual prototype explores the installation's autonomous state. A continuous Perlin noise field selects a character for every point in a dense grid. Because nearby noise values remain related, neighbouring cells produce broad textual currents rather than unrelated flicker.</p>
+      <p>The original sketch used characters from a wide range of Unicode. This version maps the same movement system to the traditional Chinese text and punctuation of <i>First Rhapsody on the Red Cliffs</i>, preserving the order of the original writing. The browser implementation recreates the original p5.js 0.8.0 noise algorithm in native JavaScript Canvas. In the proposed installation, contactless presence and motion sensing would provide an additional input through which bodies disturb the field.</p>
+    </div>
+
+    <figure class="wave-quote">
+      <blockquote><span>“逝者如斯，而未嘗往也。”</span><span>“The one streams past so swiftly yet is never gone.”</span></blockquote>
+      <cite>Su Shi, <i>The Red Cliff, Part I</i>, 1082 · English translation published in Cyril Birch (ed.), <i>Anthology of Chinese Literature</i>, 1965</cite>
+    </figure>
+
+    <div class="cs-text">
+      <p class="cs-refs">Sources: <a href="https://theme.npm.edu.tw/selection/Article.aspx?lang=2&amp;sNo=04009295" target="_blank" rel="noopener noreferrer">National Palace Museum, <i>Former Ode on the Red Cliff</i></a>; <a href="https://zh.wikisource.org/zh-hant/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B3%A6" target="_blank" rel="noopener noreferrer">Su Shi, 《前赤壁賦》</a>; <a href="https://www-1.gsb.columbia.edu/ps/china/sushi_redcliff.pdf" target="_blank" rel="noopener noreferrer">Columbia University, <i>Excerpts from The Red Cliff, Part I</i></a>.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/modern-underground">Next: Modern Underground →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: MODERN UNDERGROUND ================= -->
+<section class="page" id="page-project-modern-underground">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Exhibition guide and editorial print, 2022</p>
+    <h1>Modern Underground</h1>
+    <p class="case-sub">A newspaper-like guide and exhibition reflection inspired by E. McKnight Kauffer’s modernist poster practice.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>MFA Communication Design, Pratt Institute</div>
+      <div><span class="k">Role</span>Research, writing and editorial design</div>
+      <div><span class="k">Format</span>Printed exhibition guide and newspaper</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/modern-underground/essay-spread.png" alt="Open Modern Underground newspaper spread with text and images of E. McKnight Kauffer posters" loading="lazy"></div>
+      <p class="cs-caption">An editorial spread brings the exhibition review together with a visual index of Kauffer’s poster work.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>From exhibition visit to printed guide</h3>
+      <p>Modern Underground began after visiting Cooper Hewitt’s <i>Underground Modernist: E. McKnight Kauffer</i>. I turned the exhibition review into a newspaper-like guide that could accompany a visit, then remain as a compact record of it. The format moves between close reading, visual comparison, and editorial summary instead of simply repeating wall text.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/modern-underground/cover-detail.png" alt="Close view of the Modern Underground printed cover with black rules and a red dot" loading="lazy"></div>
+        <p class="cs-caption">The cover introduces a restrained system of rules, cropped type, and red accents.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/modern-underground/cover-stack.png" alt="Several folded copies of Modern Underground arranged on a white surface" loading="lazy"></div>
+        <p class="cs-caption">The guide was designed as a tactile, folded printed object rather than a conventional catalogue.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Kauffer’s modernism in public</h3>
+      <p>E. McKnight Kauffer (1890–1954) was a pioneering commercial artist whose posters brought modernist ideas into public life. His work for the London Underground, publishers, cultural institutions, and commercial clients used compressed form, bold colour, and strong directional movement to make advertising part of everyday visual culture.</p>
+      <p>The guide focuses on this poster practice. It groups works across place and period, allowing questions of war, transit, industry, and modernity to sit beside the written response. Kauffer’s visual language became both the subject of the project and a point of departure for its editorial form.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/modern-underground/poster-spread.png" alt="Modern Underground spread comparing international poster imagery" loading="lazy"></div>
+        <p class="cs-caption">A comparative spread connects poster language to its historical and cultural contexts.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/modern-underground/fold-out.png" alt="Folded Modern Underground print opened to a spread with large black letterforms" loading="lazy"></div>
+        <p class="cs-caption">The fold-out structure lets text, reproductions, and large-scale typography reframe one another.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A newspaper as a way of looking</h3>
+      <p>The printed form draws on Kauffer’s economy without attempting to recreate it. Cropped typography, sharp rule lines, and a red field give the guide a visual rhythm that echoes the material it examines. Reading unfolds through page turns, where commentary and reproductions continually shift one another’s meaning.</p>
+      <p class="cs-refs">Source: <a href="https://www.cooperhewitt.org/exhibition/underground-modernist-e-mcknight-kauffer/" target="_blank" rel="noopener noreferrer">Cooper Hewitt, <i>Underground Modernist: E. McKnight Kauffer</i></a>.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/douyin">Next: Douyin Fresh Livestream Guides →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: DOUYIN ================= -->
+<section class="page" id="page-project-douyin">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Content design system, 2021</p>
+    <h1>Douyin Fresh Livestream Guides<br><span style="font-weight:400;color:var(--dim)">抖音电商直播指南</span></h1>
+    <p class="case-sub">One fill-in template that lets any product category speak with a single, consistent voice.</p>
+    <p class="case-note"><i>Douyin is TikTok’s China-market counterpart.</i></p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Baron Design Studio, for Douyin E-commerce</div>
+      <div><span class="k">Role</span>Design system, template and visual design</div>
+      <div><span class="k">Format</span>Livestream content template</div>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r1x1"><img src="assets/images/projects/douyin/douyin-cover-fresh.jpg" alt="Fresh produce guide cover in orange" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img r1x1"><img src="assets/images/projects/douyin/douyin-cover-plant.jpg" alt="House plants guide cover in green" loading="lazy"></div>
+      </div>
+    </div>
+    <p class="cs-caption">A shared guide structure adapts to different categories through colour, product imagery, and content.</p>
+
+    <div class="cs-text douyin-brief">
+      <h3>The brief</h3>
+      <p>Douyin E-commerce needed livestream hosts across dozens of product categories to explain what they were selling and sell it well. Fresh fruit, seafood, house plants, flowers: each host, each category, a different person making the graphics. The risk was obvious. Fifty categories could mean fifty visual languages.</p>
+      <p>Rather than design one poster at a time, I built a template. A single structure any operator could fill in, so that a durian guide and an orchid guide would still read as one brand.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/douyin/douyin-system.png" alt="Reconstructed diagram of the template: skeleton, swappable colour themes, and the two-part structure" loading="lazy"></div>
+      <p class="cs-caption">The system, reconstructed: a fixed skeleton, a swappable accent colour, and a two-part reading structure.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img natural cs-tall"><img src="assets/images/projects/douyin/douyin-durian.jpg" alt="Full durian livestream guide, from cover through product knowledge to livestream tips" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>Two parts, always</h3>
+        <p>Every guide splits the same way. Part 1 is what the host needs to know: when it is in season, its selling points, its varieties, how to describe the taste. Part 2 is how the host performs it: staging, live demos, on-camera tasting.</p>
+        <p>The speech-box title, the dashed dividers, the hand-drawn arrows and the collage background stay fixed. The host drops in the product photo and the copy, and the layout holds.</p>
+      </div>
+    </div>
+
+    <div class="cs-split rev">
+      <div class="cs-img natural cs-tall"><img src="assets/images/projects/douyin/douyin-tulip.jpg" alt="Full tulip livestream guide following the same structure in a different colourway" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>Designed for use</h3>
+        <p>The shared framework gave operators a familiar reading rhythm while leaving room for each product’s particular selling points. They could update imagery and content without rebuilding the guide from a blank page.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Across the catalogue</h3>
+      <p>The template rolled out across fresh fruit, seafood, and house plants. Below are nine original guides built from the system. Select any guide to view it in full.</p>
+    </div>
+
+    <div class="cs-strip">
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-mangosteen.jpg" aria-label="Open the mangosteen guide"><img src="assets/images/projects/douyin/catalogue-mangosteen.jpg" alt="Mangosteen livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-cherry.jpg" aria-label="Open the cherry guide"><img src="assets/images/projects/douyin/catalogue-cherry.jpg" alt="Cherry livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-lychee.jpg" aria-label="Open the lychee guide"><img src="assets/images/projects/douyin/catalogue-lychee.jpg" alt="Lychee livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-mango.jpg" aria-label="Open the mango guide"><img src="assets/images/projects/douyin/catalogue-mango.jpg" alt="Mango livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-passion-fruit.jpg" aria-label="Open the passion fruit guide"><img src="assets/images/projects/douyin/catalogue-passion-fruit.jpg" alt="Passion fruit livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-citrus.jpg" aria-label="Open the citrus guide"><img src="assets/images/projects/douyin/catalogue-citrus.jpg" alt="Citrus livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-blueberry.jpg" aria-label="Open the blueberry guide"><img src="assets/images/projects/douyin/catalogue-blueberry.jpg" alt="Blueberry livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-melon.jpg" aria-label="Open the melon guide"><img src="assets/images/projects/douyin/catalogue-melon.jpg" alt="Melon livestream guide" loading="lazy"></button>
+      <button class="guide-thumb" type="button" data-full="assets/images/projects/douyin/catalogue-oyster.jpg" aria-label="Open the oyster guide"><img src="assets/images/projects/douyin/catalogue-oyster.jpg" alt="Oyster livestream guide" loading="lazy"></button>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/kuaishou-alliance">Next: Kuaishou Alliance Ecosystem Conference →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: KUAISHOU ALLIANCE ================= -->
+<section class="page" id="page-project-kuaishou-alliance">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Event key visual and presentation design, 2021</p>
+    <h1>Kuaishou Alliance Ecosystem Conference</h1>
+    <p class="case-sub">A Blender-built visual system for a conference about developers, connection, and a shared next stage.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Baron Design Studio, for Kuaishou Alliance</div>
+      <div><span class="k">Role</span>3D visual, key visual and presentation design</div>
+      <div><span class="k">Format</span>Event key visual, on-site presentation deck and print collateral</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/kuaishou-alliance/hero-kv.jpg" alt="Full Kuaishou Alliance Ecosystem Conference key visual with silver orbit lines and orange spheres" loading="lazy"></div>
+      <p class="cs-caption">Key visual. The Chinese theme reads: “Born of alliance, advancing together toward new shared success.”</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>A visual language for an ecosystem</h3>
+      <p>Kuaishou Alliance’s 2021 Ecosystem Conference brought developers and platform partners together around a shared future for short-form video commerce. I created the key visual and the on-site presentation language, giving the event one recognisable visual world across the opening screen, report deck, and supporting materials.</p>
+      <p>The conference theme, <i>结盟而生 向新共赢</i>, became a field of routes and orbiting elements: independent parts moving within one larger system.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Building the key visual in Blender</h3>
+      <p>The central image was built in Blender from layered metallic planes, translucent orbit lines, and warm orange spheres. The forms suggest a system in motion: individual participants maintain their own paths while gathering around a shared centre. Soft blue light and reflective surfaces keep the image technical but open rather than hard-edged.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/kuaishou-alliance/dark-visual.jpeg" alt="Dark Blender render of the Kuaishou Alliance visual system with orbital lines and orange lights" loading="lazy"></div>
+      <p class="cs-caption">A dark variation of the visual field, used to give presentation screens a deeper, stage-like atmosphere.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/kuaishou-alliance/statement.jpeg" alt="Dark conference slide with the Kuaishou Alliance message and three-dimensional visual elements" loading="lazy"></div>
+        <p class="cs-caption">A full-screen event message: “Together with thousands of developers, Kuaishou Alliance builds a shared-win new ecosystem for short-form video commerce.”</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/kuaishou-alliance/report-cover.jpeg" alt="Dark post-event report cover for the 2021 Kuaishou Alliance Ecosystem Conference" loading="lazy"></div>
+        <p class="cs-caption">Post-event report cover. Its Chinese title repeats the conference theme and identifies the 2021 Kuaishou Alliance Ecosystem Conference.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>From key visual to event deck</h3>
+      <p>The system was designed to work at presentation scale as well as in graphic materials. Dark slides use the 3D forms as a stage-like depth field behind typography, while the light key visual becomes the public-facing entry point. Orange points of light guide attention through statistics, messaging, and transitions without breaking the overall atmosphere.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/kuaishou-alliance/results.jpeg" alt="Conference results slide with white and silver forms, orange spheres, and event statistics" loading="lazy"></div>
+      <p class="cs-caption">The results slide reports 396 attendees, 162,000 cumulative livestream viewers, 10.9 million-plus social impressions, a 103% attendance rate, and 100% guest satisfaction.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>One visual world, on site</h3>
+      <p>The final recap connects the visual language to the event environment: the conference stage, venue graphics, installation moments, and participant gifts. The identity had to hold together across both a large physical space and information-dense presentation material.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/kuaishou-alliance/event-recap.jpeg" alt="Conference highlights showing the stage, venue graphics, installations, participants, and gifts" loading="lazy"></div>
+      <p class="cs-caption">Conference highlights: the stage, venue graphics, event installation, and participant gifts.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/benlai-art-education">Next: Stay Real Art / 本来计画 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: BENLAI ART EDUCATION ================= -->
+<section class="page" id="page-project-benlai-art-education">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Brand rebrand, 2021</p>
+    <h1>Stay Real Art / 本来计画</h1>
+    <p class="case-sub">A complete rebrand that invites children to look closely, discover beauty, and stay curious.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Baron Design Studio, for a children’s art education institution in Tianjin, China</div>
+      <div><span class="k">Role</span>Lead designer: brand research, strategy, visual identity and applications</div>
+      <div><span class="k">Format</span>Identity system, custom typography, motion and environmental applications</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/eye-construction.png" alt="Eye-form construction diagram for the Benlai Art Education identity" loading="lazy"></div>
+      <p class="cs-caption">The eye’s overlapping curves establish the visual grammar for the mark and its supporting shapes.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>From Bella Art to Benlai</h3>
+      <p>Benlai is a children’s art education institution in Tianjin. Its earlier identity, Bella Art, used a familiar tree-and-hand symbol. The rebrand began by looking beyond an “art class” label. Through observing the institution and its learning environment, we defined a more active role: helping children open their eyes to the world, find their own visual language, and notice beauty in everyday life.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/logo-evolution.png" alt="Comparison between the former Bella Art logo and the new Benlai Art Education bilingual wordmark" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Open eyes</h3>
+      <p>The core idea is simple: art education starts with learning to see. The eye became the identity’s generative motif, rather than an illustration added afterwards. It carries attention, curiosity, and the small moment when a child notices something for the first time.</p>
+    </div>
+
+    <div class="cs-trio">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/auxiliary-forms-1.jpg" alt="Construction study of the 本 character derived from the Benlai eye motif" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/auxiliary-forms-2.jpg" alt="Construction study of the 来 character derived from the Benlai eye motif" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/auxiliary-forms-3.jpg" alt="Construction study of the 计 character derived from the Benlai eye motif" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/type-construction.png" alt="Detailed construction diagram for the Benlai Chinese wordmark" loading="lazy"></div>
+      <p class="cs-caption">A shared set of proportions and curves gives the custom characters a repeatable visual logic.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>Making the mark move</h3>
+      <p>The animated mark treats the eye as an action. It opens, shifts, and re-forms, bringing the idea of looking into digital touchpoints without introducing a separate illustration style.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/identity-motion.gif" alt="Animated Benlai eye motif shifting and opening" loading="lazy"></div>
+      <p class="cs-caption">The eye motif becomes a short, repeatable motion language for the identity.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/chinese-wordmark.jpg" alt="Custom Chinese wordmark construction for Benlai Art Education" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/english-wordmark.jpg" alt="Custom English Stay Real Art wordmark construction" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A system built to travel</h3>
+      <p>The visual system turns the eye into a family of crops, curves, frames, and graphic gestures. Bright lime green, warm orange, and charcoal give the identity energy without treating children’s culture as childish. The elements shift in scale, crop, and colour while retaining the same underlying geometry.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/benlai-art-education/palette.jpg" alt="Benlai Art Education primary colour palette in orange, charcoal, and lime green" loading="lazy"></div>
+      <p class="cs-caption">The palette gives the system a recognisable energy across both digital and printed materials.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>From identity to everyday encounters</h3>
+      <p>The system was carried into educational materials, packaging, calendars, event graphics, and stationery. It needed to feel playful enough to meet children at their level, while remaining disciplined enough for a growing institution.</p>
+    </div>
+
+    <div class="cs-duo applications-pair">
+      <div>
+        <div class="cs-img"><img src="assets/images/projects/benlai-art-education/hero-applications.jpg" alt="Benlai Art Education visual identity applied across printed materials, packaging, cards, and objects" loading="lazy"></div>
+        <p class="cs-caption">The identity carried through the everyday materials of a children’s art education space.</p>
+      </div>
+      <div>
+        <div class="cs-img"><img src="assets/images/projects/benlai-art-education/market-installation.jpg" alt="Benlai stationery market installation with branded signage, displays, and printed materials" loading="lazy"></div>
+        <p class="cs-caption">At the Benlai stationery market, signage, printed matter, fixtures, and merchandise form one physical visual experience.</p>
+      </div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/devil-fruit">Next: Devil Fruit / 恶魔果实 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: NAILIT ================= -->
+<section class="page" id="page-project-nailit">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Brand creation, 2024</p>
+    <h1>NAILIT</h1>
+    <p class="case-sub">Naming, identity, packaging, and art direction for a press-on nail startup.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2024</div>
+      <div><span class="k">Context</span>Design Lead, NAILIT</div>
+      <div><span class="k">Role</span>Naming, identity, packaging, art direction and social media</div>
+      <div><span class="k">Format</span>Brand strategy, visual identity, packaging and launch content</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/project-card.jpg" alt="NAILIT wordmark and sculptural mark framed over a misty forest image" loading="eager"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A name made to stretch</h3>
+      <p>NAILIT is a press-on nail brand built around doing things in your own way. As Design Lead, I named the startup and established its visual language from the ground up, across the identity, packaging, launch materials, and social content.</p>
+      <p>“Nail It” holds two meanings at once: a direct reference to the product and the familiar expression for getting something exactly right. The brand needed to feel confident but never loud, more like a personal ritual than a beauty trend.</p>
+    </div>
+
+    <div class="cs-split">
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/logo-sketch.png" alt="Early sketches exploring the NAILIT symbol as a fallen box and a three-dimensional N" loading="lazy"></div>
+      <div class="cs-copy">
+        <h3>A mark lying in space</h3>
+        <p>The symbol began with a box tipped onto its side: a compact, three-dimensional form that also reads as an N at rest. It gave the mark weight and direction, linking the identity to the object that would eventually hold each set of nails.</p>
+      </div>
+    </div>
+
+    <div class="cs-video">
+      <video controls playsinline muted loop preload="metadata" poster="assets/images/projects/nailit/wordmark-dark.png">
+        <source src="assets/media/projects/nailit/nailit-identity.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="cs-text">
+      <h3>A line that carries change</h3>
+      <p>The space between NAIL and IT extends into a continuous line. It lengthens the name as it is spoken and becomes a flexible carrier for the brand: a place for nail sets, campaign images, colours, and changing collections to land without losing the identity.</p>
+    </div>
+
+    <div class="cs-quad nailit-line-grid">
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/line-pink.png" alt="Pink press-on nails resting on the extended NAILIT wordmark line" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/line-green.png" alt="Green and gold press-on nails resting on the extended NAILIT wordmark line" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/line-wine.png" alt="Wine-coloured press-on nails resting on the extended NAILIT wordmark line" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/line-french.png" alt="French manicure press-on nails resting on the extended NAILIT wordmark line" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Light, held in a box</h3>
+      <p>Press-on nails catch light differently across finishes, colours, and textures. The primary packaging translates that changing quality into a restrained field of soft, dispersed light. We tested a range of papers, coatings, and translucent materials to find a surface treatment that could hold and diffuse light rather than simply print a gradient. A controlled band of colour travels around the box; inside, translucent printed layers reveal further shifts as the package is opened.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural nailit-packaging-system"><img src="assets/images/projects/nailit/primary-packaging-system.png" alt="Packaging construction artwork showing the NAILIT wordmark line and a soft multicoloured band across each box surface" loading="lazy"></div>
+      <p class="cs-caption">The extended wordmark and a shifting band of light form the primary package structure.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r43"><img src="assets/images/projects/nailit/primary-box-hero.jpg" alt="Primary NAILIT box photographed as a square white object with subtle iridescent colour" loading="lazy"></div>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/nailit/primary-box-top.jpg" alt="Top view of the primary NAILIT box with a translucent lid and extended wordmark" loading="lazy"></div>
+        <p class="cs-caption">A quiet outer surface keeps the package object-like and tactile.</p>
+      </div>
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/nailit/primary-box-hand.jpg" alt="A hand holding the NAILIT primary box, opened to reveal the coloured inner layer" loading="lazy"></div>
+        <p class="cs-caption">The colour field is revealed through the opening gesture.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>NAILIT Young</h3>
+      <p>NAILIT Young brings the same light-based language to a more accessible, youth-facing line. The colour becomes brighter and the typographic gesture more playful, while the extended line, package structure, and sense of material shift keep it recognisably part of the same brand. Its die-cut window takes the shape of the NAILIT symbol, making the logo a physical opening that reveals the nails inside.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/nailit/young-identity.png" alt="Colourful NAILIT Young lockup set against a soft gradient field" loading="lazy"></div>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/nailit/young-product-detail.jpg" alt="NAILIT Young packaging with a die-cut NAILIT-symbol window revealing press-on nail sets" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img r43"><img src="assets/images/projects/nailit/young-product-line.jpg" alt="A full display of NAILIT Young boxes and press-on nail sets" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>From object to feed</h3>
+      <p>The identity was designed to move easily between product launches and social content. The same line, light field, and open composition give every post a shared structure while leaving room for each collection to have its own mood.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/nailit/primary-product.jpg" alt="NAILIT press-on nail sets displayed in branded primary packaging" loading="lazy"></div>
+        <p class="cs-caption">The packaging system holds varied nail finishes without competing with the product.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/nailit/social-media.png" alt="NAILIT social media grid with product, launch, and Young-line content" loading="lazy"></div>
+        <p class="cs-caption">The same visual system carries into launch and social content.</p>
+      </div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/1024">Next: [1,0,2,4] →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: LA LA LAND ================= -->
+<section class="page" id="page-project-lalaland">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Illustration and motion, 2023</p>
+    <h1>La La Land: Title Sequence</h1>
+    <p class="case-sub">A reimagined opening title sequence for <i>La La Land</i>, created through illustration, animation, and music.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2023</div>
+      <div><span class="k">Context</span>Pratt Institute</div>
+      <div><span class="k">Role</span>Illustration, animation and title design</div>
+      <div><span class="k">Format</span>Animated title sequence and illustration series</div>
+    </div>
+
+    <div class="cs-video">
+      <video controls playsinline preload="metadata" poster="assets/images/projects/lalaland/project-card.jpg">
+        <source src="assets/media/projects/lalaland/lalaland-title-sequence.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="cs-text">
+      <h3>An illustrated overture</h3>
+      <p>This project reimagines the opening title sequence for <i>La La Land</i> through a set of illustrated scenes. The sequence draws on the film's music, colour, and sense of performance, translating them into a graphic world that builds with the soundtrack.</p>
+    </div>
+
+    <div class="cs-illustration-grid">
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-01.png" alt="Illustrated piano keys and Ryan Gosling credit against a deep blue background" loading="lazy"></div>
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-02.png" alt="Illustrated Emma Stone figure dancing in a yellow landscape" loading="lazy"></div>
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-03.png" alt="Illustrated Justin Hurwitz composer title framed by a yellow stage light" loading="lazy"></div>
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-04.png" alt="Illustrated John Legend credit beside a golden grand piano" loading="lazy"></div>
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-05.png" alt="Illustrated J. K. Simmons credit with purple forms and a martini glass" loading="lazy"></div>
+      <div class="cs-img r169"><img src="assets/images/projects/lalaland/illustration-06.png" alt="Illustrated Emma Stone and Ryan Gosling dancing against a purple background" loading="lazy"></div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/nailit">Next: NAILIT →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: EGO CAMPING ================= -->
+<section class="page" id="page-project-ego-camping">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Brand identity and experience, 2022</p>
+    <h1>EGO Camping</h1>
+    <p class="case-sub">A complete identity for a campsite and event programme, shaped by shelter, texture, and the quiet rhythm of being outdoors.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>Design Consultant, EGO Camping</div>
+      <div><span class="k">Role</span>Brand strategy, visual identity and applications</div>
+      <div><span class="k">Format</span>Identity system, outdoor goods, event materials and sub-brand direction</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/project-card.jpg" alt="EGO Camping identity in a grassy field, reflected in a mirror" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A shelter, reduced</h3>
+      <p>EGO Camping provides a place to stay outdoors as well as a programme of recurring gatherings. The identity needed to work across the campsite, practical equipment, and a changing calendar of activities without becoming louder than the landscape.</p>
+      <p>I built the mark from a reduced tent-like silhouette, pairing an open triangular plane with a solid counterpart. Natural, lightly textured surfaces keep the system tactile and airy, while the compact geometry stays clear at every scale.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/ego-camping/logo-lockups.jpg" alt="EGO Camping logo in light and dark lockups" loading="lazy"></div>
+        <p class="cs-caption">The mark holds its shape in both light and dark settings.</p>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/ego-camping/logo-construction.jpg" alt="Construction details and type specimens for the EGO Camping logo" loading="lazy"></div>
+        <p class="cs-caption">A compact geometry gives the identity a calm, recognisable structure.</p>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Equipment for the field</h3>
+      <p>The identity was applied to useful objects for a day outdoors, giving each one a quiet signature that feels native to the setting.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/gear-axe.jpg" alt="EGO Camping branded axe and outdoor equipment" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/gear-chair.jpg" alt="EGO Camping branded folding camp chair" loading="lazy"></div>
+    </div>
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/gear-tent.jpg" alt="EGO Camping tent carrying the brand mark" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/gear-beanie.jpg" alt="EGO Camping knit beanie with the geometric tent mark" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A campsite with a calendar</h3>
+      <p>Beyond the site itself, EGO Camping hosts recurring activities. The event language introduces a small set of portable signals that can shift from flags and tickets to badges and bags while staying connected to the core mark.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/event-flag.png" alt="EGO Camping Explore Yourself event flag" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/event-stickers.png" alt="EGO Camping event sticker and graphic system" loading="lazy"></div>
+    </div>
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/event-badges.png" alt="EGO Camping event badges and participant credentials" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/event-totes.png" alt="EGO Camping Explore Yourself event tote bags" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>EGO Camping Children</h3>
+      <p>EGO Camping Children extends the identity into a distinct space for young campers. A brighter palette, friendly icons, and simple storytelling keep the parent brand visible while giving the programme its own sense of play.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/ego-camping/children-storyboard.jpg" alt="EGO Camping Children visual storyboard with playful icons and activity imagery" loading="lazy"></div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/douyin">Next: Douyin Fresh Livestream Guides →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: MOSSCUBE ================= -->
+<section class="page" id="page-project-mosscube">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Installation and publication, 2022</p>
+    <h1>MOSSCUBE</h1>
+    <p class="case-sub">An installation and accompanying book that make overlooked urban moss visible as a shared, more-than-human city ecology.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>Installation exhibition and publication</div>
+      <div><span class="k">Role</span>Concept, installation, editorial design and photography</div>
+      <div><span class="k">Format</span>Spatial installation, object series and exhibition guide</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/project-card.jpg" alt="MOSSCUBE exhibition catalogue on a city grate with transparent moss habitats" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Looking down, differently</h3>
+      <p>Moss is an ordinary urban companion. It gathers on concrete, stone, drains, and neglected seams, yet it is rarely treated as part of the city’s living fabric. MOSSCUBE begins from that small act of attention.</p>
+      <p>The project asks how people might notice the forms of coexistence already present around them. Rather than framing nature and technology as opposites, it places them inside the same urban scene.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/cubes-angle.jpg" alt="Three transparent MOSSCUBE habitats containing circuit boards, soil, moss and stones" loading="lazy"></div>
+      <p class="cs-caption">Three material studies: circuitry, hybrid urban terrain, and moss-rich ground.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div><div class="cs-img natural"><img src="assets/images/projects/mosscube/cubes-front.jpg" alt="Front view of three transparent installation cubes with different moss and technology environments" loading="lazy"></div></div>
+      <div><div class="cs-img natural"><img src="assets/images/projects/mosscube/cubes-top.jpg" alt="Top view of the three MOSSCUBE habitats" loading="lazy"></div></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>An exhibition that can travel</h3>
+      <p>The accompanying publication introduces the installation and extends its questions beyond the gallery. It moves between materials, speculative images, and short reflections on the city as a habitat built by people, organisms, and infrastructure together.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/book-cover.jpg" alt="MOSSCUBE installation introduction manual with a green cover" loading="lazy"></div>
+    </div>
+
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/book-spread-01.jpg" alt="MOSSCUBE publication spread discussing future robotics and moss" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/book-spread-02.jpg" alt="MOSSCUBE publication spread pairing a printed circuit board with text about technology" loading="lazy"></div>
+    </div>
+    <div class="cs-duo">
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/book-spread-03.jpg" alt="MOSSCUBE publication spread showing the installation as an imagined future ecological device" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/mosscube/book-spread-04.jpg" alt="MOSSCUBE publication spread on moss, environment and nature" loading="lazy"></div>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/douyin">Next: Douyin Fresh Livestream Guides →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: BRAINFIT ================= -->
+<section class="page" id="page-project-brainfit">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">UI/UX, service concept and training kit, 2021</p>
+    <h1>BrainFit</h1>
+    <p class="case-sub">An early concept for helping people and families notice cognitive concerns, prepare for care conversations, and support everyday training through a digital service and physical kit.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Developed from 始智不渝, a 2020 Enactus Tiangong University team project</div>
+      <div><span class="k">Role</span>Team Lead, concept, research synthesis, UI/UX and kit design</div>
+      <div><span class="k">Format</span>Mobile service concept, screening support and tangible training kit</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/project-card.jpg" alt="An older adult using the BrainFit mobile concept at home" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Where my research began</h3>
+      <p>BrainFit was my first attempt to use design to respond to questions around mild cognitive impairment, memory, and family care. The project began with a simple concern: early changes can be easy to overlook at home, while knowing what to do next can feel difficult for both individuals and families.</p>
+      <p>It was not designed as a diagnostic or treatment tool. Instead, it explored how a service might help families organise observations, approach an early conversation, and create more accessible routes into everyday support and professional care.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/research-background.jpg" alt="BrainFit early research poster describing family, clinician and caregiver perspectives" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>From concern to a supported routine</h3>
+      <p>The early research mapped hospitals, care homes, and homes. From these observations, BrainFit connected a lightweight screening conversation with a tailored activity plan and simple records that could make changes easier to discuss over time.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/screening-training.jpg" alt="BrainFit research poster showing screening and training directions" loading="lazy"></div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/concept.jpg" alt="BrainFit service concept showing a mobile app and a tangible training kit in home settings" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>One service, two kinds of support</h3>
+      <p>The concept paired a mobile interface with a tangible kit. The app brought together check-ins, activity plans, progress notes, and accessible information. The kit moved activities offscreen, allowing familiar materials, objects, and shared play to become part of a routine.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/interface-overview.jpg" alt="BrainFit interface system showing mobile screens for cognitive support" loading="lazy"></div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/user-journey.jpg" alt="BrainFit user journey from an initial check-in to activity planning and progress review" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Training beyond the screen</h3>
+      <p>The physical kit turned abstract tasks into hands-on activities. A life book supported reminiscence, a local colour map encouraged visual recognition, plant records created a slow observational practice, and card games invited joint play and hand-eye coordination.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/brainfit/training-kit.jpg" alt="BrainFit tangible training kit with a life book, colour map, plant record and card game" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A formative project</h3>
+      <p>Looking back, BrainFit is an early exploratory project. Its clinical framing and language would need a more rigorous foundation today. But it established questions that continue through my work: how technology can support memory in everyday life, how design can involve families, and how physical and digital experiences can work together with care.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/douyin">Next: Douyin Fresh Livestream Guides →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: HOMING ================= -->
+<section class="page" id="page-project-homing">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">UI/UX and service concept, 2021</p>
+    <h1>Homing</h1>
+    <p class="case-sub">An early exploration of how a digital service might make care and communication across generations feel more present, less demanding, and easier to begin.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Independent UI/UX project</div>
+      <div><span class="k">Role</span>Research through design, service concept, UX/UI and visual identity</div>
+      <div><span class="k">Format</span>Two connected mobile app concepts for family communication</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/homing/project-card.jpg" alt="A collection of Homing mobile app screens for mood, letters and family communication" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A personal question about distance</h3>
+      <p>Homing began with a question that felt close to home. As I moved away for university, I found it harder to understand what my mother was going through during menopause and how to stay connected without every conversation becoming a difficult one.</p>
+      <p>The project started from menopause, then widened into a broader exploration of intergenerational communication. It asks how design might make it easier for family members to notice feelings, leave room for expression, and respond with care.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/homing/research-background.jpg" alt="Homing early research board showing its personal starting point and questions about menopause" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Listening before proposing a service</h3>
+      <p>Early observation and conversations highlighted a recurring tension: family members often wanted to help, but did not know how to approach a sensitive topic. The resulting concept did not try to explain or resolve menopause. It explored a gentler communication layer around everyday emotions, distance, and support.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/homing/research-and-concept.jpg" alt="Homing research board with observations, interview excerpts and an early concept sketch" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Letters, not alerts</h3>
+      <p>Homing was imagined as two linked spaces. One supported a mother in recording moments, moods, and reflections for herself. The other allowed adult children and relatives to prepare short letters, then attach simple mood, time, or weather tags. The goal was to create a thoughtful opening for conversation rather than a system of surveillance.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/homing/service-flow.jpg" alt="Homing workflow showing two connected apps for a mother and her family members" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Making emotion easier to approach</h3>
+      <p>A visual tag system translated moods, weather, and time into small, shareable prompts. It allowed people to communicate indirectly when direct language felt too difficult, while keeping the interaction personal and optional.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/homing/tag-system-and-ui.jpg" alt="Homing mood tag system and final mobile interface screens" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>An early research through design exploration</h3>
+      <p>Homing is an early project, and its health framing would need deeper collaboration and more rigorous research today. Still, it was formative in showing me how a design question can grow from everyday family life, and how digital tools can support wellbeing without reducing care to data.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/douyin">Next: Douyin Fresh Livestream Guides →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: STAR ECHO ================= -->
+<section class="page" id="page-project-star-echo">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Interactive installation and voice visualisation, 2021</p>
+    <h1>Star Echo</h1>
+    <p class="case-sub">A voice-responsive installation that imagines an exchange with an unfamiliar solar system.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2021</div>
+      <div><span class="k">Context</span>Creative coding and interaction design exploration</div>
+      <div><span class="k">Role</span>Concept, interaction, visual system, sound, and code</div>
+      <div><span class="k">Format</span>Voice-responsive audiovisual installation</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/project-card.jpg" alt="Star Echo audiovisual installation mockup with a colourful circular voice visualisation" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Listening to an impossible conversation</h3>
+      <p>Star Echo began with a childhood question: if people could speak beyond Earth, and another lifeform answered from elsewhere in the solar system, what might that exchange feel like?</p>
+      <p>Ordinary sound cannot travel through the vacuum of space. The project takes this limitation as a prompt for translation. It imagines conversation as vibration, visual trace, and changing sonic material rather than speech alone.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/research-and-reference.jpg" alt="Star Echo research board connecting childhood space imagery, planetary references, sound and interactive questions" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>From space data to a speculative voice</h3>
+      <p>NASA's data sonification work provided the conceptual reference. It translates observations and electromagnetic or plasma-wave data into audible forms, creating a way to experience information that cannot be heard directly. Star Echo uses this logic as a creative method.</p>
+      <p>A recorded voice is processed alongside a set of pre-composed planetary sound profiles, then returned as a speculative reply. The installation does not claim to reproduce the literal sound of a planet. Instead, it stages an imagined answer grounded in the idea of sonification.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/interaction-and-visual-system.jpg" alt="Star Echo process board showing microphone input, circular visual experiments, colour trials and a p5.js system" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>Voice becomes a visual field</h3>
+      <p>A microphone receives a participant's voice. Its amplitude and frequency changes drive circular paths, layered lines, transparency, and colour. Speaking causes the field to swell and reorganise in real time, making the act of voicing visible as a shifting, luminous waveform.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/visual-01.jpg" alt="Star Echo circular voice visualisation in blue, orange and green on black" loading="lazy"></div>
+    </div>
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/visual-02.jpg" alt="Star Echo circular voice visualisation in overlapping blue and yellow lines on black" loading="lazy"></div>
+    </div>
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/star-echo/visual-03.jpg" alt="Star Echo circular voice visualisation in multicoloured concentric traces on black" loading="lazy"></div>
+    </div>
+
+    <div class="cs-text">
+      <h3>A small cosmic reply</h3>
+      <p>After a spoken prompt, the installation selects a planetary sound profile and combines it with the participant's recording. The return is not a literal answer. It is a gesture toward dialogue with something unfamiliar, where listening, seeing, and imagining become inseparable.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/modern-underground">Next: Modern Underground →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT: DEVIL FRUIT ================= -->
+<section class="page" id="page-project-devil-fruit">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="case">
+    <a class="case-back" href="#/design">← Side B: Design</a>
+    <p class="case-eyebrow">Brand identity and packaging, 2022</p>
+    <h1>Devil Fruit / 恶魔果实</h1>
+    <p class="case-sub">A rebrand for a fruit-wine label. I kept the devil, and gave it a system.</p>
+    <div class="case-meta">
+      <div><span class="k">Date</span>2022</div>
+      <div><span class="k">Context</span>Design consultant, for a fruit-wine brand</div>
+      <div><span class="k">Role</span>Brand identity, typeface, packaging</div>
+      <div><span class="k">Format</span>Logo, custom type, labels, bottles</div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/hero-lineup.jpg" alt="Six Devil Fruit bottles lined up in six flavour colours" loading="lazy"></div>
+      <p class="cs-caption">The rebranded range: one mascot, one wordmark, one colour per flavour.</p>
+    </div>
+
+    <!-- ===== PART 1: VISUAL IDENTITY ===== -->
+    <div class="cs-text">
+      <h3>Visual identity</h3>
+      <p>Devil Fruit is a fruit-wine brand. I came in as a design consultant to rebrand it. The old logo had a real character, a small red devil, but it read as rough and off-the-shelf. The value was in the devil, so I kept it and rebuilt everything around it: cleaner geometry, tighter construction, a mark that holds its shape at any size.</p>
+      <p>The wordmark needed a voice of its own, so I drew a custom typeface for it. Heavy, blunt, modern. Every letter shares the same width and weight, so DEVIL FRUIT reads as one solid block.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-1.jpg" alt="Geometric construction of the Devil Fruit eye mark on a circular grid" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-2.jpg" alt="Old devil logo next to the redrawn new devil logo" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-3.jpg" alt="Custom Devil Fruit typeface with construction grid and spacing marks" loading="lazy"></div>
+      <p class="cs-caption">The custom typeface, drawn from scratch for the wordmark.</p>
+    </div>
+
+    <div class="cs-text">
+      <h3>A pair of brackets</h3>
+      <p>Set the two words together and a gap opens in the middle. I filled it with a pair of brackets, and dropped the devil inside. The brackets do two things at once. They fold the mascot into the wordmark, so logo and name lock into one shape. And they stay open: whatever sits between them can change. A flavour, an icon, a campaign. The brackets are a slot for whatever comes next.</p>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-4.jpg" alt="DEVIL (devil) FRUIT wordmark with the devil mascot inside the brackets" loading="lazy"></div>
+      <p class="cs-caption">The primary lockup: the devil lives inside the brackets.</p>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-5.jpg" alt="Devil Fruit wordmark with the bracketed devil set as a superscript" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-6.jpg" alt="Stacked Devil Fruit lockup with the bracketed devil centred between the words" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="cs-duo">
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-7.jpg" alt="Standard colour: Pantone Orange 021 C" loading="lazy"></div>
+      </div>
+      <div>
+        <div class="cs-img natural"><img src="assets/images/projects/devilfruit/vi-8.jpg" alt="Two-tone wordmark lockups, black on orange and orange on black" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- ===== PART 2: PACKAGING ===== -->
+    <div class="cs-text">
+      <h3>Packaging</h3>
+      <p>The label puts the wordmark at full size, with the devil peeking through a soft white shape behind the eyes, and one flavour colour per SKU.</p>
+      <p>That shape is not decoration. It is a splash: the burst of foam thrown up when two bottles meet in a toast, redrawn as a flat graphic. Every flavour carries its own splash.</p>
+    </div>
+
+    <div class="cs-trio">
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-1.png" alt="New Devil Fruit label, peach flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-2.png" alt="New Devil Fruit label, second flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-3.png" alt="New Devil Fruit label, third flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-4.png" alt="New Devil Fruit label, fourth flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-5.png" alt="New Devil Fruit label, fifth flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/pkg-6.png" alt="New Devil Fruit label, sixth flavour" loading="lazy"></div>
+    </div>
+    <p class="cs-caption" style="margin-bottom:3.2rem">One label system, six flavours.</p>
+
+    <!-- ===== PART 3: BOTTLES ===== -->
+    <div class="cs-text">
+      <h3>On the shelf</h3>
+      <p>Wrapped on glass, the system comes together: the devil at the neck, the wordmark across the body, the flavour colour running the whole bottle.</p>
+    </div>
+
+    <div class="cs-video">
+      <video controls playsinline muted loop preload="metadata" poster="assets/images/projects/devilfruit/devilfruit-poster.jpg">
+        <source src="assets/media/projects/devilfruit/devilfruit-bottle.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="cs-trio">
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-1.png" alt="Devil Fruit bottle, lactic flavour in blue" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-2.png" alt="Devil Fruit bottle, second flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-3.png" alt="Devil Fruit bottle, third flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-4.png" alt="Devil Fruit bottle, fourth flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-5.png" alt="Devil Fruit bottle, fifth flavour" loading="lazy"></div>
+      <div class="cs-img natural"><img src="assets/images/projects/devilfruit/bottle-6.png" alt="Devil Fruit bottle, sixth flavour" loading="lazy"></div>
+    </div>
+
+    <div class="cs-hero">
+      <div class="cs-img r169"><img src="assets/images/projects/devilfruit/cap.png" alt="Two black Devil Fruit bottle caps with the wordmark in white" loading="lazy"></div>
+      <p class="cs-caption">The wordmark carries all the way down to the cap.</p>
+    </div>
+
+    <div class="cs-next">
+      <a href="#/design">← All projects</a>
+      <a class="nxt" href="#/design/1024">Next: [1,0,2,4] →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Full guide view">
+  <button class="lb-close" type="button" aria-label="Close">×</button>
+  <img src="" alt="Full-length livestream guide">
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="page-about">
+  <header class="top">
+    <a class="brand" href="#/">Home</a>
+    <a href="#/about">About</a>
+  </header>
+  <div class="sub">
+    <h1 class="visually-hidden">About</h1>
+    <div class="about-profile">
+      <div class="about-portrait">
+        <img src="assets/images/about/yufeng-wu-portrait.jpg" alt="Portrait of Yufeng Wu">
+      </div>
+      <h2 class="about-name">Yufeng Wu | 吴御风</h2>
+      <nav class="about-socials" aria-label="Profiles and contact">
+        <a href="https://scholar.google.com/citations?user=g34RhIAAAAAJ&amp;hl=en&amp;inst=8615794581978883182" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l4 2.18v4.32c0 1.93 3.13 3.5 7 3.5s7-1.57 7-3.5v-4.32l2-1.09V17h2V9L12 3zm5 12.5c0 .83-2.24 2-5 2s-5-1.17-5-2v-3.23l5 2.73 5-2.73v3.23z"/></svg></a>
+        <a href="https://www.linkedin.com/in/yufeng-wu-b53566286" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18H5.7V9.7h2.6V18zM7 8.6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18.3 18h-2.6v-4.1c0-1-.4-1.7-1.3-1.7-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8V18h-2.6V9.7h2.6v1.1c.3-.5 1-1.3 2.3-1.3 1.7 0 3 1.1 3 3.5V18z"/></svg></a>
+        <a href="mailto:yufeng.wu@uts.edu.au" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg></a>
+      </nav>
+    </div>
+    <figure class="about-quote">
+      <blockquote>“Design is so simple, that's why it is so complicated.”</blockquote>
+      <figcaption>Paul Rand</figcaption>
+    </figure>
+    <div class="bio about-copy">
+      <p>Hi, I'm Yufeng, a researcher and designer currently completing a PhD at the <a href="https://www.uts.edu.au/" target="_blank" rel="noopener noreferrer">University of Technology Sydney</a>. Before moving into Human-Computer Interaction, I completed an MFA in Communication Design at <a href="https://www.pratt.edu/" target="_blank" rel="noopener noreferrer">Pratt Institute</a> and a BEng in Industrial Design at <a href="https://en.tiangong.edu.cn/" target="_blank" rel="noopener noreferrer">Tiangong University</a>.</p>
+      <p>My research asks how emerging interactive technologies can support people in their everyday lives, especially in relation to <a href="https://www.materialisingmemories.com/" target="_blank" rel="noopener noreferrer">memory</a> and wellbeing. My interests include generative AI, conversational agents, digital health, tangible interaction, and augmented and virtual reality.</p>
+      <p>My design practice includes interactive experiences, interfaces, and visual identities. I have worked at design studios and technology companies.</p>
+      <p>I enjoy moving between research and making. Projects often begin with an open question or a conversation with participants. Solving the problem matters, but so does how the experience feels. I want my work to support people while leaving room for thoughtful details and moments of enjoyment.</p>
+      <p>The idea for this website came from my love of music and album design. I started buying albums and vinyl records when I was young, and their artwork and packaging first drew me to design. That history inspired the two-sided structure of this site. <a href="#/research">Side A</a> presents my research and academic work. <a href="#/design">Side B</a> presents my design experience and selected projects.</p>
+      <p>Contact: <a href="mailto:yufeng.wu@uts.edu.au">yufeng.wu@uts.edu.au</a></p>
+    </div>
+    <div class="sec">
+      <h3>CV</h3>
+      <div class="entry"><a href="assets/YufengWu-CV.pdf" target="_blank" rel="noopener noreferrer">Download my CV (PDF) ↗</a></div>
+      <div class="entry" style="color:var(--dim)">Last updated July 2026.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var routes = {
+    '': 'home', '/': 'home',
+    '/research': 'research', '/design': 'design',
+    '/about': 'about', '/cv': 'about',
+    '/design/lalaland': 'project-lalaland',
+    '/design/1024': 'project-1024',
+    '/design/exit': 'project-exit',
+    '/design/groupthink': 'project-groupthink',
+    '/design/whitney': 'project-whitney',
+    '/design/order': 'project-order',
+    '/design/transformation': 'project-transformation',
+    '/design/wave': 'project-wave',
+    '/design/star-echo': 'project-star-echo',
+    '/design/modern-underground': 'project-modern-underground',
+    '/design/douyin': 'project-douyin',
+    '/design/kuaishou-alliance': 'project-kuaishou-alliance',
+    '/design/benlai-art-education': 'project-benlai-art-education',
+    '/design/ego-camping': 'project-ego-camping',
+    '/design/mosscube': 'project-mosscube',
+    '/design/brainfit': 'project-brainfit',
+    '/design/homing': 'project-homing',
+    '/design/nailit': 'project-nailit',
+    '/design/devil-fruit': 'project-devil-fruit'
+  };
+  function clearPublicationTarget() {
+    var targets = document.querySelectorAll('.pub.is-target');
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].classList.remove('is-target');
+    }
+  }
+  function focusPublication(id) {
+    clearPublicationTarget();
+    var publication = document.getElementById(id);
+    if (!publication) return;
+    publication.classList.add('is-target');
+    publication.setAttribute('tabindex', '-1');
+    publication.focus({ preventScroll: true });
+    publication.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'center'
+    });
+    window.setTimeout(function () { publication.classList.remove('is-target'); },
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 160 : 900);
+  }
+  function scrollToPublicationList() {
+    var heading = document.getElementById('publication-list');
+    if (!heading) return;
+    heading.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
+  }
+  function showResearchPublications() {
+    var research = document.getElementById('page-research');
+    var buttons = research.querySelectorAll('.tabs button');
+    var panes = research.querySelectorAll('.tabpane');
+    var i;
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].classList.toggle('on', buttons[i].dataset.tab === 'a-publications');
+    }
+    for (i = 0; i < panes.length; i++) {
+      panes[i].classList.toggle('on', panes[i].id === 'tab-a-publications');
+    }
+  }
+  function route() {
+    var h = location.hash.replace(/^#/, '');
+    var parts = h.split('?');
+    var name = routes[parts[0]] !== undefined ? routes[parts[0]] : null;
+    if (!name) return;
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) pages[i].classList.remove('on');
+    document.getElementById('page-' + name).classList.add('on');
+    window.scrollTo(0, 0);
+    var params = new URLSearchParams(parts[1] || '');
+    var publication = params.get('publication');
+    if (name === 'research' && publication) {
+      showResearchPublications();
+      requestAnimationFrame(function () { focusPublication(publication); });
+    } else if (name === 'research' && params.get('tab') === 'publications') {
+      showResearchPublications();
+      clearPublicationTarget();
+      requestAnimationFrame(scrollToPublicationList);
+    } else {
+      clearPublicationTarget();
+    }
+  }
+  window.addEventListener('hashchange', route);
+  route();
+
+  function trackItems(list) {
+    var items = Array.prototype.slice.call(list.querySelectorAll('.track-item'));
+    items.sort(function (a, b) { return Number(a.dataset.priority) - Number(b.dataset.priority); });
+    return items;
+  }
+
+  function fitHomeTracks() {
+    var home = document.getElementById('page-home');
+    if (!home.classList.contains('on')) return;
+
+    var signature = home.querySelector('.sig');
+    var lists = home.querySelectorAll('.tracks');
+    var mobile = window.innerWidth <= 700;
+    var signatureHeight = signature.getBoundingClientRect().height;
+    var breathingRoom = mobile ? 24 : 40;
+    var trackBottom = window.innerHeight - signatureHeight - breathingRoom;
+    var i;
+
+    for (i = 0; i < lists.length; i++) {
+      var items = trackItems(lists[i]);
+      var maxItems = mobile ? 2 : Number(lists[i].dataset.homeMax || items.length);
+      var j;
+
+      for (j = 0; j < items.length; j++) {
+        items[j].classList.toggle('fit-hide', j >= maxItems);
+      }
+
+      while (lists[i].parentElement.getBoundingClientRect().bottom > trackBottom && items.length > 2) {
+        var visible = items.filter(function (item) { return !item.classList.contains('fit-hide'); });
+        if (visible.length <= 2) break;
+        visible[visible.length - 1].classList.add('fit-hide');
+      }
+    }
+  }
+
+  var fitFrame;
+  function scheduleHomeTrackFit() {
+    if (fitFrame) cancelAnimationFrame(fitFrame);
+    fitFrame = requestAnimationFrame(function () {
+      fitFrame = null;
+      fitHomeTracks();
+    });
+  }
+
+  window.addEventListener('resize', scheduleHomeTrackFit);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', scheduleHomeTrackFit);
+  window.addEventListener('hashchange', scheduleHomeTrackFit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleHomeTrackFit);
+  scheduleHomeTrackFit();
+
+  var tabGroups = document.querySelectorAll('.tabs');
+  for (var g = 0; g < tabGroups.length; g++) {
+    (function (group) {
+      var container = group.parentElement;
+      var btns = group.querySelectorAll('button');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function () {
+          var panes = container.querySelectorAll('.tabpane');
+          for (var j = 0; j < btns.length; j++) btns[j].classList.remove('on');
+          for (var j = 0; j < panes.length; j++) panes[j].classList.remove('on');
+          this.classList.add('on');
+          container.querySelector('#tab-' + this.getAttribute('data-tab')).classList.add('on');
+        });
+      }
+    })(tabGroups[g]);
+  }
+
+  var disc = document.getElementById('disc');
+  var home = document.getElementById('page-home');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+  var dragging = false;
+  var activePointer = null;
+  var currentFace = 'a';
+  var discAngle = 0;
+  var angularVelocity = reducedMotion.matches ? 0 : 18;
+  var baseVelocity = 18;
+  var pointerStartX = 0;
+  var pointerStartY = 0;
+  var lastPointerX = 0;
+  var lastPointerY = 0;
+  var lastPointerAngle = 0;
+  var lastPointerTime = 0;
+  var pointerTravel = 0;
+  var lastFrameTime = performance.now();
+
+  function clamp(value, minimum, maximum) {
+    return Math.min(maximum, Math.max(minimum, value));
+  }
+
+  function normalizedAngle(value) {
+    while (value > 180) value -= 360;
+    while (value < -180) value += 360;
+    return value;
+  }
+
+  function angleFromPointer(e) {
+    var bounds = disc.getBoundingClientRect();
+    var centreX = bounds.left + bounds.width / 2;
+    var centreY = bounds.top + bounds.height / 2;
+    return Math.atan2(e.clientY - centreY, e.clientX - centreX) * 180 / Math.PI;
+  }
+
+  function renderDisc() {
+    var speed = Math.abs(angularVelocity);
+    var hue = Math.sin(discAngle * Math.PI / 180) * 5 + clamp(angularVelocity / 90, -3, 3);
+    var saturation = 1 + Math.min(speed / 1200, .06);
+    var brightness = 1 + Math.min(speed / 1800, .035);
+    disc.style.setProperty('--disc-angle', discAngle.toFixed(2) + 'deg');
+    disc.style.setProperty('--disc-hue', hue.toFixed(2) + 'deg');
+    disc.style.setProperty('--disc-saturation', saturation.toFixed(3));
+    disc.style.setProperty('--disc-brightness', brightness.toFixed(3));
+  }
+
+  function setDiscFace(side) {
+    currentFace = side === 'b' ? 'b' : 'a';
+    disc.style.setProperty('--disc-flip', currentFace === 'b' ? '180deg' : '0deg');
+    disc.setAttribute('aria-pressed', currentFace === 'b' ? 'true' : 'false');
+    disc.setAttribute('aria-label', 'Interactive compact disc, Side ' + currentFace.toUpperCase() + '. Drag to spin and press to flip.');
+  }
+
+  function animateDisc(now) {
+    var elapsed = Math.min(48, now - lastFrameTime);
+    lastFrameTime = now;
+    if (home.classList.contains('on') && !document.hidden) {
+      if (!dragging && !reducedMotion.matches) {
+        discAngle += angularVelocity * elapsed / 1000;
+        angularVelocity += (baseVelocity - angularVelocity) * (1 - Math.exp(-elapsed / 1400));
+      }
+      if (Math.abs(discAngle) > 36000) discAngle %= 360;
+      renderDisc();
+    }
+    requestAnimationFrame(animateDisc);
+  }
+
+  disc.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    dragging = true;
+    activePointer = e.pointerId;
+    pointerStartX = lastPointerX = e.clientX;
+    pointerStartY = lastPointerY = e.clientY;
+    pointerTravel = 0;
+    lastPointerAngle = angleFromPointer(e);
+    lastPointerTime = e.timeStamp;
+    angularVelocity = 0;
+    disc.classList.add('is-grabbing');
+    disc.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+
+  disc.addEventListener('pointermove', function (e) {
+    if (!dragging || e.pointerId !== activePointer) return;
+    var nextAngle = angleFromPointer(e);
+    var delta = normalizedAngle(nextAngle - lastPointerAngle);
+    var elapsed = Math.max(8, e.timeStamp - lastPointerTime);
+    var movement = Math.hypot(e.clientX - lastPointerX, e.clientY - lastPointerY);
+    pointerTravel += movement;
+    discAngle += delta;
+    angularVelocity = angularVelocity * .55 + clamp(delta / elapsed * 1000, -540, 540) * .45;
+    lastPointerX = e.clientX;
+    lastPointerY = e.clientY;
+    lastPointerAngle = nextAngle;
+    lastPointerTime = e.timeStamp;
+    renderDisc();
+    e.preventDefault();
+  });
+
+  function finishDiscPointer(e, allowTap) {
+    if (!dragging || e.pointerId !== activePointer) return;
+    dragging = false;
+    activePointer = null;
+    disc.classList.remove('is-grabbing');
+    if (disc.hasPointerCapture(e.pointerId)) disc.releasePointerCapture(e.pointerId);
+    if (allowTap && pointerTravel < 7 && Math.hypot(e.clientX - pointerStartX, e.clientY - pointerStartY) < 7) {
+      setDiscFace(currentFace === 'a' ? 'b' : 'a');
+    }
+    if (reducedMotion.matches) {
+      angularVelocity = 0;
+    } else if (Math.abs(angularVelocity) < 3) {
+      angularVelocity = baseVelocity;
+    }
+  }
+
+  disc.addEventListener('pointerup', function (e) { finishDiscPointer(e, true); });
+  disc.addEventListener('pointercancel', function (e) { finishDiscPointer(e, false); });
+  disc.addEventListener('lostpointercapture', function () {
+    if (!dragging) return;
+    dragging = false;
+    activePointer = null;
+    disc.classList.remove('is-grabbing');
+    if (reducedMotion.matches) angularVelocity = 0;
+  });
+  disc.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    setDiscFace(currentFace === 'a' ? 'b' : 'a');
+  });
+
+  var discSides = home.querySelectorAll('[data-disc-side]');
+  for (var s = 0; s < discSides.length; s++) {
+    discSides[s].addEventListener('pointerenter', function () {
+      if (precisePointer.matches) setDiscFace(this.dataset.discSide);
+    });
+    discSides[s].addEventListener('focusin', function () {
+      setDiscFace(this.dataset.discSide);
+    });
+  }
+
+  function syncMotionPreference() {
+    angularVelocity = reducedMotion.matches ? 0 : baseVelocity;
+    renderDisc();
+  }
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', syncMotionPreference);
+  else reducedMotion.addListener(syncMotionPreference);
+
+  setDiscFace('a');
+  renderDisc();
+  requestAnimationFrame(animateDisc);
+})();
+
+/* GROUPTHINK: boids flocking, ported from the original Processing sketch (sketch_1_0.pde) */
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var maxSpeed = 5, maxForce = 0.1, sepDist = 25, attractDist = 300, repelDist = 25;
+  function setupFlock(canvas, host, interactive) {
+    if (!canvas || !host) return;
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    var boids = [], mx = -1e4, my = -1e4, W = 0, H = 0, running = false, raf = 0;
+    var triangleSize = interactive ? 8 : 4.5;
+
+    function limit(v, m) {
+      var d = Math.hypot(v.x, v.y);
+      if (d > m && d > 0) { v.x = v.x / d * m; v.y = v.y / d * m; }
+    }
+    function resize() {
+      var r = host.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function spawn() {
+      boids = [];
+      var n = interactive ? (W < 700 ? 60 : 100) : (W < 320 ? 34 : 46);
+      for (var i = 0; i < n; i++) {
+        boids.push({ x: Math.random() * W, y: Math.random() * H, vx: Math.random() * 2 - 1, vy: Math.random() * 2 - 1 });
+      }
+    }
+    function step() {
+      for (var i = 0; i < boids.length; i++) {
+        var b = boids[i];
+        var sx = 0, sy = 0, sc = 0, avx = 0, avy = 0, ac = 0, cx = 0, cy = 0, cc = 0;
+        for (var j = 0; j < boids.length; j++) {
+          if (i === j) continue;
+          var o = boids[j];
+          var dx = b.x - o.x, dy = b.y - o.y;
+          var d = Math.hypot(dx, dy);
+          if (d > 0 && d < sepDist) {
+            sx += dx / d / d; sy += dy / d / d; sc++;
+            avx += o.vx; avy += o.vy; ac++;
+            cx += o.x; cy += o.y; cc++;
+          }
+        }
+        var fx = 0, fy = 0, f, m;
+        if (sc) {
+          f = { x: sx / sc, y: sy / sc }; m = Math.hypot(f.x, f.y);
+          if (m > 0) { f.x = f.x / m * maxSpeed; f.y = f.y / m * maxSpeed; }
+          f.x -= b.vx; f.y -= b.vy; limit(f, maxForce); fx += f.x; fy += f.y;
+        }
+        if (ac) {
+          f = { x: avx / ac, y: avy / ac }; m = Math.hypot(f.x, f.y);
+          if (m > 0) { f.x = f.x / m * maxSpeed; f.y = f.y / m * maxSpeed; }
+          f.x -= b.vx; f.y -= b.vy; limit(f, maxForce); fx += f.x; fy += f.y;
+        }
+        if (cc) {
+          var tx = cx / cc - b.x, ty = cy / cc - b.y; m = Math.hypot(tx, ty);
+          if (m > 0) { tx = tx / m * maxSpeed; ty = ty / m * maxSpeed; }
+          f = { x: tx - b.vx, y: ty - b.vy }; limit(f, maxForce); fx += f.x; fy += f.y;
+        }
+        if (interactive) {
+          var dm = Math.hypot(b.x - mx, b.y - my);
+          if (dm < repelDist) {
+            f = { x: b.x - mx, y: b.y - my }; m = Math.hypot(f.x, f.y) || 1;
+            var mag = (1 - dm / repelDist) * maxSpeed;
+            f.x = f.x / m * mag; f.y = f.y / m * mag; limit(f, maxForce); fx += f.x; fy += f.y;
+          } else if (dm < attractDist) {
+            f = { x: mx - b.x, y: my - b.y }; m = Math.hypot(f.x, f.y) || 1;
+            var mag2 = (dm / attractDist) * maxSpeed;
+            f.x = f.x / m * mag2; f.y = f.y / m * mag2; limit(f, maxForce); fx += f.x; fy += f.y;
+          }
+        }
+        b.vx += fx; b.vy += fy;
+        f = { x: b.vx, y: b.vy }; limit(f, maxSpeed); b.vx = f.x; b.vy = f.y;
+        b.x += b.vx; b.y += b.vy;
+        if (b.x < 0) b.x = W; if (b.x > W) b.x = 0;
+        if (b.y < 0) b.y = H; if (b.y > H) b.y = 0;
+      }
+    }
+    function draw() {
+      ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H); ctx.fillStyle = '#fff';
+      for (var i = 0; i < boids.length; i++) {
+        var b = boids[i];
+        ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(Math.atan2(b.vy, b.vx) + Math.PI / 2);
+        ctx.beginPath(); ctx.moveTo(0, -triangleSize); ctx.lineTo(-triangleSize * .625, triangleSize * .625); ctx.lineTo(triangleSize * .625, triangleSize * .625); ctx.closePath(); ctx.fill(); ctx.restore();
+      }
+    }
+    function loop() { if (!running) return; step(); draw(); raf = requestAnimationFrame(loop); }
+    function start() { if (running || reduced.matches) return; running = true; raf = requestAnimationFrame(loop); }
+    function stop() { running = false; cancelAnimationFrame(raf); }
+    function initialize() { resize(); if (!boids.length && W) { spawn(); draw(); } }
+    if (interactive) {
+      host.addEventListener('pointermove', function (e) { var r = host.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+      host.addEventListener('pointerleave', function () { mx = -1e4; my = -1e4; });
+    }
+    if ('ResizeObserver' in window) new ResizeObserver(function () { var hadBoids = boids.length; resize(); if (!hadBoids && W) { spawn(); draw(); } }).observe(host);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { initialize(); start(); }
+        else stop();
+      }, { threshold: .05 }).observe(host);
+    } else { initialize(); start(); }
+    function syncMotion() { if (reduced.matches) { stop(); draw(); } else if (host.getBoundingClientRect().width) start(); }
+    if (reduced.addEventListener) reduced.addEventListener('change', syncMotion);
+    else reduced.addListener(syncMotion);
+    initialize();
+  }
+
+  setupFlock(document.getElementById('gt-canvas'), document.getElementById('gt-live'), true);
+  var thumbnails = document.querySelectorAll('.gt-thumb-canvas');
+  for (var thumbnailIndex = 0; thumbnailIndex < thumbnails.length; thumbnailIndex++) setupFlock(thumbnails[thumbnailIndex], thumbnails[thumbnailIndex], false);
+})();
+
+/* WAVE: a responsive field composed only from characters in Su Shi's 前赤壁賦 */
+(function () {
+  var canvases = document.querySelectorAll('.wave-canvas');
+  if (!canvases.length) return;
+
+  var sourceText = '壬戌之秋，七月既望，蘇子與客泛舟遊於赤壁之下。清風徐來，水波不興。舉酒屬客，誦明月之詩，歌窈窕之章。少焉，月出於東山之上，徘徊於斗牛之間。白露橫江，水光接天。縱一葦之所如，凌萬頃之茫然。浩浩乎如憑虛御風，而不知其所止；飄飄乎如遺世獨立，羽化而登仙。於是飲酒樂甚，扣舷而歌之。歌曰：「桂棹兮蘭槳，擊空明兮泝流光。渺渺兮余懷，望美人兮天一方。」客有吹洞簫者，倚歌而和之。其聲嗚嗚然，如怨，如慕，如泣，如訴；餘音嫋嫋，不絕如縷。舞幽壑之潛蛟，泣孤舟之嫠婦。蘇子愀然，正襟危坐，而問客曰：「何為其然也？」客曰：「月明星稀，烏鵲南飛。此非曹孟德之詩乎？西望夏口，東望武昌，山川相繆，鬱乎蒼蒼；此非孟德之困於周郎者乎？方其破荊州，下江陵，順流而東也，舳艫千里，旌旗蔽空，釃酒臨江，橫槊賦詩，固一世之雄也，而今安在哉？況吾與子漁樵於江渚之上，侶魚蝦而友麋鹿；駕一葉之扁舟，舉匏樽以相屬。寄蜉蝣於天地，渺滄海之一粟。哀吾生之須臾，羨長江之無窮。挾飛仙以遨遊，抱明月而長終。知不可乎驟得，託遺響於悲風。」蘇子曰：「客亦知夫水與月乎？逝者如斯，而未嘗往也；盈虛者如彼，而卒莫消長也。蓋將自其變者而觀之，則天地曾不能以一瞬；自其不變者而觀之，則物與我皆無盡也，而又何羨乎！且夫天地之間，物各有主，苟非吾之所有，雖一毫而莫取。惟江上之清風，與山間之明月，耳得之而為聲，目遇之而成色，取之無禁，用之不竭，是造物者之無盡藏也，而吾與子之所共適。」客喜而笑，洗盞更酌。肴核既盡，杯盤狼籍。相與枕藉乎舟中，不知東方之既白。';
+  var glyphs = Array.from(sourceText.replace(/[^\u3400-\u9fff，。；：？！、：「」]/gu, ''));
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var PERLIN_YWRAPB = 4;
+  var PERLIN_YWRAP = 1 << PERLIN_YWRAPB;
+  var PERLIN_ZWRAPB = 8;
+  var PERLIN_ZWRAP = 1 << PERLIN_ZWRAPB;
+  var PERLIN_SIZE = 4095;
+  var perlinOctaves = 4;
+  var perlinAmpFalloff = 0.5;
+  var perlin = null;
+
+  function scaledCosine(value) {
+    return 0.5 * (1.0 - Math.cos(value * Math.PI));
+  }
+
+  /* Ported from the p5.js 0.8.0 noise function used by the original sketch. */
+  function p5Noise(x, y, z) {
+    y = y || 0;
+    z = z || 0;
+    if (perlin === null) {
+      perlin = new Array(PERLIN_SIZE + 1);
+      for (var p = 0; p < PERLIN_SIZE + 1; p++) perlin[p] = Math.random();
+    }
+    if (x < 0) x = -x;
+    if (y < 0) y = -y;
+    if (z < 0) z = -z;
+
+    var xi = Math.floor(x), yi = Math.floor(y), zi = Math.floor(z);
+    var xf = x - xi, yf = y - yi, zf = z - zi;
+    var result = 0;
+    var amplitude = 0.5;
+
+    for (var octave = 0; octave < perlinOctaves; octave++) {
+      var offset = xi + (yi << PERLIN_YWRAPB) + (zi << PERLIN_ZWRAPB);
+      var rxf = scaledCosine(xf);
+      var ryf = scaledCosine(yf);
+      var n1 = perlin[offset & PERLIN_SIZE];
+      n1 += rxf * (perlin[(offset + 1) & PERLIN_SIZE] - n1);
+      var n2 = perlin[(offset + PERLIN_YWRAP) & PERLIN_SIZE];
+      n2 += rxf * (perlin[(offset + PERLIN_YWRAP + 1) & PERLIN_SIZE] - n2);
+      n1 += ryf * (n2 - n1);
+
+      offset += PERLIN_ZWRAP;
+      n2 = perlin[offset & PERLIN_SIZE];
+      n2 += rxf * (perlin[(offset + 1) & PERLIN_SIZE] - n2);
+      var n3 = perlin[(offset + PERLIN_YWRAP) & PERLIN_SIZE];
+      n3 += rxf * (perlin[(offset + PERLIN_YWRAP + 1) & PERLIN_SIZE] - n3);
+      n2 += ryf * (n3 - n2);
+      n1 += scaledCosine(zf) * (n2 - n1);
+      result += n1 * amplitude;
+      amplitude *= perlinAmpFalloff;
+
+      xi <<= 1; xf *= 2;
+      yi <<= 1; yf *= 2;
+      zi <<= 1; zf *= 2;
+      if (xf >= 1) { xi++; xf--; }
+      if (yf >= 1) { yi++; yf--; }
+      if (zf >= 1) { zi++; zf--; }
+    }
+    return result;
+  }
+
+  function createWave(canvas) {
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    var thumbnail = canvas.getAttribute('data-wave-mode') === 'thumbnail';
+    var host = thumbnail ? canvas : canvas.parentElement;
+    var fontSize = thumbnail ? 6 : 10;
+    var gridSize = thumbnail ? 8 : 12;
+    var W = 0, H = 0, dpr = 1, frameCount = 0, running = false, raf = 0;
+
+    function resize() {
+      var rect = host.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      W = rect.width;
+      H = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      draw();
+    }
+
+    function draw() {
+      if (!W || !H) return;
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#fff';
+      ctx.font = fontSize + 'px "Songti SC", "STSong", "Noto Serif TC", "PMingLiU", serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      for (var i = 0; i < W / gridSize; i++) {
+        for (var j = 0; j < H / gridSize; j++) {
+          var noiseValue = p5Noise(i * 0.0007, j * 0.0007, frameCount * 0.0002);
+          var glyphIndex = Math.min(glyphs.length - 1, Math.floor(noiseValue * glyphs.length));
+          ctx.fillText(glyphs[glyphIndex], i * gridSize, j * gridSize);
+        }
+      }
+    }
+
+    function loop() {
+      if (!running) return;
+      frameCount++;
+      draw();
+      raf = requestAnimationFrame(loop);
+    }
+    function start() {
+      if (running || reducedMotion.matches) return;
+      running = true;
+      raf = requestAnimationFrame(loop);
+    }
+    function stop() {
+      running = false;
+      cancelAnimationFrame(raf);
+    }
+    function syncMotion() {
+      if (reducedMotion.matches) {
+        stop();
+        draw();
+      } else if (host.getBoundingClientRect().width) start();
+    }
+
+    var resizeObserver = 'ResizeObserver' in window ? new ResizeObserver(resize) : null;
+    if (resizeObserver) resizeObserver.observe(host);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { resize(); start(); }
+        else stop();
+      }, { threshold: .03 }).observe(host);
+    } else {
+      resize();
+      start();
+    }
+    if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', syncMotion);
+    else reducedMotion.addListener(syncMotion);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(resize);
+    resize();
+  }
+
+  for (var canvasIndex = 0; canvasIndex < canvases.length; canvasIndex++) createWave(canvases[canvasIndex]);
+})();
+
+/* Lightbox for full-length guide images */
+(function () {
+  var lb = document.getElementById('lightbox');
+  if (!lb) return;
+  var img = lb.querySelector('img');
+  var closeBtn = lb.querySelector('.lb-close');
+  var lastFocus = null;
+  function open(src, label) {
+    lastFocus = document.activeElement;
+    img.src = src;
+    if (label) img.alt = label;
+    lb.classList.add('on');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function close() {
+    lb.classList.remove('on');
+    img.src = '';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.guide-thumb') : null;
+    if (btn) {
+      var inner = btn.querySelector('img');
+      open(btn.getAttribute('data-full'), inner ? inner.alt : '');
+      return;
+    }
+    if (lb.classList.contains('on') && (e.target === lb || e.target === closeBtn)) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb.classList.contains('on')) close();
+  });
+})();
+</script>
+</body>
+</html>

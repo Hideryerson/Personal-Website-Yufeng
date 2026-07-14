@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Yufeng Wu, Researcher and Designer</title>
+  <desc id="desc">A white editorial share image with Yufeng Wu's name and an iridescent compact disc.</desc>
+  <defs>
+    <clipPath id="discClip"><circle cx="922" cy="315" r="228"/></clipPath>
+    <radialGradient id="discBase" cx="35%" cy="27%" r="73%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".72"/>
+      <stop offset=".3" stop-color="#e9e9f2" stop-opacity=".32"/>
+      <stop offset=".78" stop-color="#bfc0d0" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#9192a5" stop-opacity=".48"/>
+    </radialGradient>
+    <linearGradient id="discTint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffc4de" stop-opacity=".42"/>
+      <stop offset="25%" stop-color="#ffecba" stop-opacity=".34"/>
+      <stop offset="47%" stop-color="#b4d0ff" stop-opacity=".46"/>
+      <stop offset="67%" stop-color="#bae0ff" stop-opacity=".40"/>
+      <stop offset="82%" stop-color="#ffcce8" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#fff4c4" stop-opacity=".30"/>
+    </linearGradient>
+    <radialGradient id="rim">
+      <stop offset="0" stop-color="#eef0f4" stop-opacity="0"/>
+      <stop offset="92%" stop-color="#eef0f4" stop-opacity="0"/>
+      <stop offset="93%" stop-color="#f5f5fa" stop-opacity=".72"/>
+      <stop offset="97.5%" stop-color="#a0a0af" stop-opacity=".38"/>
+      <stop offset="99.2%" stop-color="#5a5a69" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="streaks" width="17" height="17" patternUnits="userSpaceOnUse" patternTransform="rotate(24)">
+      <path d="M0 0H17" stroke="#fff" stroke-opacity=".11" stroke-width="1"/>
+      <path d="M0 6H17" stroke="#5a5a69" stroke-opacity=".05" stroke-width=".5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <g fill="#111111" font-family="Helvetica, Arial, 'PingFang SC', sans-serif">
+    <text x="76" y="249" font-size="54" font-weight="600" letter-spacing="-2.3">Yufeng Wu | 吴御风</text>
+    <text x="80" y="300" font-size="23" letter-spacing="-.25">Researcher &amp; Designer</text>
+    <text x="80" y="488" font-size="16" letter-spacing=".2">Side A: Research</text>
+    <line x1="221" y1="482" x2="251" y2="482" stroke="#111111" stroke-width="1"/>
+    <text x="270" y="488" font-size="16" letter-spacing=".2">Side B: Design</text>
+  </g>
+  <g clip-path="url(#discClip)">
+    <circle cx="922" cy="315" r="228" fill="url(#discBase)"/>
+    <circle cx="922" cy="315" r="228" fill="url(#discTint)"/>
+    <circle cx="922" cy="315" r="228" fill="url(#streaks)" opacity=".52"/>
+    <circle cx="922" cy="315" r="209" fill="none" stroke="#000000" stroke-opacity=".08" stroke-width="2"/>
+    <circle cx="922" cy="315" r="50" fill="#ffffff" fill-opacity=".56"/>
+    <circle cx="922" cy="315" r="43" fill="none" stroke="#ffffff" stroke-opacity=".74" stroke-width="8"/>
+    <circle cx="922" cy="315" r="37" fill="none" stroke="#000000" stroke-opacity=".11" stroke-width="2"/>
+    <circle cx="922" cy="315" r="18" fill="#d9d9e4" fill-opacity=".5"/>
+    <circle cx="922" cy="315" r="9" fill="#ffffff" fill-opacity=".76"/>
+    <path d="M757 140C830 112 928 102 1024 135" fill="none" stroke="#ffffff" stroke-opacity=".50" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <circle cx="922" cy="315" r="228" fill="url(#rim)"/>
+</svg>
