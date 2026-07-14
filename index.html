@@ -86,7 +86,6 @@
     column-gap: 2.5rem;
     padding: 1.1rem 1.6rem 15rem;
   }
-  .disc-label { font-size: .78rem; margin: 0 0 1.6rem; }
   .side h2 {
     font-weight: 700;
     text-transform: uppercase;
@@ -276,7 +275,7 @@
   /* ---------------- SUBPAGES ---------------- */
   .sub {
     max-width: 820px; margin: 0 auto;
-    padding: 1.5rem 1.6rem 5rem;
+    padding: 1.1rem 1.6rem 5rem;
   }
   .sub h1 {
     font-weight: 700;
@@ -364,7 +363,9 @@
     transition: background-size .3s ease, color .2s ease;
   }
   .tabs button:hover { color: var(--ink); }
-  .tabs button.on { color: var(--ink); background-size: 100% 1.5px; }
+  .tabs button.on,
+  .tabs button.on:hover,
+  .tabs button.on:focus-visible { color: var(--ink); background-size: 100% 1.5px; }
   .tabpane { display: none; }
   .tabpane.on { display: block; }
 
@@ -815,7 +816,6 @@
     .home-main { grid-template-columns: 1fr; row-gap: 2.4rem; padding-bottom: 1.6rem; }
     .side[data-disc-side="a"] { order: 1; }
     .side[data-disc-side="b"] { order: 2; }
-    .disc-label { margin-bottom: .9rem; }
     .sig {
       position: relative;
       left: auto; bottom: auto;
@@ -832,8 +832,6 @@
     .cards { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     .pub { grid-template-columns: 120px 1fr; gap: 0 .9rem; }
-    #page-research .sub,
-    #page-design .sub { padding-top: 2.9rem; }
     #page-research .sub h1,
     #page-design .sub h1 {
       margin-top: 0;
@@ -873,21 +871,20 @@
     .top a:hover,
     .side h2 a:hover { background-size: 0 1.5px; }
     .side h2 a:hover { background-size: 0 2px; }
-    .tabs button:hover { color: var(--dim); }
+    .tabs button:hover:not(.on) { color: var(--dim); }
   }
 </style>
 </head>
 <body>
 
 <!-- ================= HOME ================= -->
-<section class="page on" id="page-home">
+<section class="page" id="page-home">
   <header class="top">
     <a class="brand" href="/">Home</a>
     <a href="/about">About</a>
   </header>
   <main class="home-main">
     <div class="side" data-disc-side="a">
-      <p class="disc-label">Disc 1</p>
       <h2><a href="/research">Side A: Research</a></h2>
       <ol class="tracks" data-home-max="4">
         <li class="track-item" data-priority="1"><a href="/research/conversational-agents-ar">Conversational Agents in Augmented Reality: A Systematic Review <span class="yr">(2026)</span></a></li>
@@ -898,7 +895,6 @@
       </ol>
     </div>
     <div class="side" data-disc-side="b">
-      <p class="disc-label">Disc 2</p>
       <h2><a href="/design">Side B: Design</a></h2>
       <ol class="tracks" data-home-max="4">
         <li class="track-item" data-priority="1"><a href="/design/1024">[1,0,2,4] <span class="yr">(2023)</span></a></li>
