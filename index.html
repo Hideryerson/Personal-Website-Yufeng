@@ -799,6 +799,7 @@
     .home-main { grid-template-columns: 1fr; row-gap: 2.4rem; padding-bottom: 1.6rem; }
     .side[data-disc-side="a"] { order: 1; }
     .side[data-disc-side="b"] { order: 2; }
+    .disc-label { margin-bottom: .9rem; }
     .sig {
       position: relative;
       left: auto; bottom: auto;
@@ -815,7 +816,13 @@
     .cards { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     .pub { grid-template-columns: 120px 1fr; gap: 0 .9rem; }
-    .sub h1 { font-size: var(--xl); }
+    #page-research .sub,
+    #page-design .sub { padding-top: 2.9rem; }
+    #page-research .sub h1,
+    #page-design .sub h1 {
+      margin-top: 0;
+      font-size: var(--xl);
+    }
     .tabs {
       flex-wrap: nowrap;
       gap: .2rem 1.1rem;
